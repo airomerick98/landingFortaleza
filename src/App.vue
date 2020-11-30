@@ -1403,6 +1403,10 @@ button:disabled {
 	}
 }
 
+.slider {
+	height: 613px !important;
+}
+
 .w-100 {
 	width: 100%;
 }

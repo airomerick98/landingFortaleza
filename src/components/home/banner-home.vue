@@ -113,6 +113,7 @@ export default {
 	background-color: white;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
 	bottom: 0;
 	display: flex;
 	justify-content: space-between;

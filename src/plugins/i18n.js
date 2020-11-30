@@ -13,6 +13,7 @@ const i18n = new VueI18n({
 				{
 					id: 1,
 					name: 'INICIO',
+					link: '#banner-home',
 				},
 				{
 					id: 2,
@@ -36,7 +37,7 @@ const i18n = new VueI18n({
 				},
 				{
 					id: 6,
-					name: 'CONTACTANOS',
+					name: 'CONTACTO',
 					link: '#contact',
 				},
 			],
@@ -167,27 +168,32 @@ const i18n = new VueI18n({
 				{
 					id: 1,
 					name: 'Inicio',
-					link: '',
+					link: '#banner-home',
 				},
 				{
 					id: 2,
 					name: 'Nosotros',
+					link: '#contact-us',
 				},
 				{
 					id: 3,
 					name: 'Calidad',
+					link: '#quality',
 				},
 				{
 					id: 4,
 					name: 'Productos',
+					link: '#products',
 				},
 				{
 					id: 5,
 					name: 'Mercados',
+					link: '#markets',
 				},
 				{
 					id: 6,
 					name: 'Contacto',
+					link: '#contact',
 				},
 			],
 		},
@@ -197,6 +203,7 @@ const i18n = new VueI18n({
 				{
 					id: 1,
 					name: 'HOME',
+					link: '#banner-home',
 				},
 				{
 					id: 2,
@@ -351,27 +358,32 @@ const i18n = new VueI18n({
 				{
 					id: 1,
 					name: 'Home',
-					link: '',
+					link: '#banner-home',
 				},
 				{
 					id: 2,
 					name: 'About Us',
+					link: '#contact-us',
 				},
 				{
 					id: 3,
 					name: 'Quality',
+					link: '#quality',
 				},
 				{
 					id: 4,
 					name: 'Products',
+					link: '#products',
 				},
 				{
 					id: 5,
 					name: 'Markets',
+					link: '#markets',
 				},
 				{
 					id: 6,
 					name: 'Contact Us',
+					link: '#contact',
 				},
 			],
 		},

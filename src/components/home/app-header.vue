@@ -64,7 +64,7 @@
 				<v-layout row align-center>
 					<v-flex>
 					<v-layout row align-center class="menu-header">
-					<v-flex v-for="(item, index) in $t('links')" class="px-4" :key="index">
+					<v-flex v-for="(item, index) in $t('links')" class="px-1 width-desktop" :key="index">
 						<a :href="item.link" class="link-header">
 							{{item.name}}
 						</a>
@@ -199,6 +199,7 @@ export default {
 
 .app-header {
 		background-color: color(white);
+		box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
 		height: 54px;
 		padding: 11px 17px;
 		position: fixed;
@@ -395,6 +396,12 @@ export default {
 		@media (max-width: 936px) {
 			border-radius: 3px;
 			height: 50px;
+		}
+	}
+
+	.width-desktop {
+		@media (min-width: 936px) {
+			width: 110px;
 		}
 	}
 </style>

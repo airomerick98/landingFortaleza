@@ -8,7 +8,7 @@
 				<v-flex class="wd-50">
 					<p class="title-list-footer bold border-bottom">{{$t('titleInformation')}}</p>
 						<v-flex v-for="(item, index) in $t('linksFooter')" :key="index">
-							<a class="link-footer">
+							<a class="link-footer" :href="item.link">
 								{{item.name}}
 							</a>
 						</v-flex>

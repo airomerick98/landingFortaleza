@@ -21,7 +21,7 @@
 					</v-flex>
 					<v-flex>
 						<input
-						placeholder="Teléfono *"
+						:placeholder="$t('placeholderPhone')"
 						class="input-form"
 						type="phone">
 					</v-flex>
