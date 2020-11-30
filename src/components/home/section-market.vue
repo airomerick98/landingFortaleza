@@ -1,0 +1,63 @@
+<template>
+  <div class="section-market" id="markets">
+		<v-flex class="bold title-market" text-xs-center>{{$t('titleMarket')}}</v-flex>
+		<v-flex class="description-market bold" text-xs-center>
+			{{$t('descriptionMarket')}}
+		</v-flex>
+		<div class="content-image">
+			<img src="/static/images/banners/mapa-market.png" alt="imagen-mapa" class="br-mobile content-image">
+		</div>
+		<div class="content-image">
+			<img src="/static/images/banners/section-market-mobile.png" alt="image-mapa-mobile" class="br-desktop">
+		</div>
+	</div>
+</template>
+
+<script>
+export default {
+	name: 'section-market',
+};
+</script>
+
+<style lang="scss" scoped>
+.section-market {
+	background-color: linear-gradient(to bottom, #ffffff, #fdfdfd 45%, #e8e8e8);
+	padding: 40px 0 60px 0;
+
+	@media (min-width: 936px) {
+		background-color: none;
+		padding: 60px 0 0 0;
+	}
+}
+
+.title-market {
+	color: #878787;
+	font-size: 25px;
+
+	@media (min-width: 936px) {
+		font-size: 33px;
+	}
+}
+
+.description-market {
+	color: #585858;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 41px 0 70px 0;
+	padding: 0 40px;
+
+	@media (min-width: 936px) {
+		margin: 53px auto 0 auto;
+		max-width: 850px;
+	}
+}
+
+.content-image {
+	padding: 0 65px;
+	width: 100%;
+
+	@media (min-width: 936px) {
+		padding: 0;
+	}
+}
+</style>
