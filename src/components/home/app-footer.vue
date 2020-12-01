@@ -15,7 +15,7 @@
 				</v-flex>
 			</div>
 			<div class="wd-30">
-				<p class="title-list-footer bold border-bottom">Contáctanos</p>
+				<p class="title-list-footer bold border-bottom">{{$t('titleContactFooter')}}</p>
 				<div>
 					<v-layout row>
 						<v-flex xs1>

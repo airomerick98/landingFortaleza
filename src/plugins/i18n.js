@@ -127,6 +127,87 @@ const i18n = new VueI18n({
 			],
 			titleQuality: 'CALIDAD',
 			titleLineProducts: 'LÍNEA DE PRODUCTOS',
+			lineProducts: [
+				{
+					id: 1,
+					icon: '/static/images/icons/icon-product-one.png',
+					urlImage: '/static/images/section/product-1.png',
+					title: 'Conservas',
+					description: 'Elaboramos nuestros productos cumpliendo con el sistema vigente HACCP, asegurando la inocuidad y calidad sanitaria, ofreciendo así productos de calidad.',
+					listProd: [
+						{
+							id: 1,
+							name: '– Espárragos Verdes',
+						},
+						{
+							id: 2,
+							name: '– Espárragos Blancos',
+						},
+						{
+							id: 3,
+							name: '– Pimiento Morrón',
+						},
+						{
+							id: 4,
+							name: '– Arándano',
+						},
+					],
+				},
+				{
+					id: 2,
+					title: 'Frescos',
+					description: 'Llevamos a tu mesa nuestra línea de productos frescos, directos del campo, cumpliendo con las Buenas Prácticas de Manufactura (BPM) y calidad.',
+					icon: '/static/images/icons/icon-product-two.png',
+					urlImage: '/static/images/section/product-2.png',
+					listProd: [
+						{
+							id: 1,
+							name: '– Espárrago verde',
+						},
+						{
+							id: 2,
+							name: '– Maracuyá',
+						},
+						{
+							id: 3,
+							name: '– Arándano',
+						},
+						{
+							id: 4,
+							name: '– Mango: Kent',
+						},
+						{
+							id: 5,
+							name: '– Palta: Hass y fuerte',
+						},
+					],
+				},
+				{
+					id: 3,
+					title: 'Congelados',
+					description: 'Llevamos a tu mesa nuestra línea de congelados, cumpliendo con los lineamientos de calidad e inocuidad.',
+					urlImage: '/static/images/section/product-3.png',
+					icon: '/static/images/icons/icon-product-three.png',
+					listProd: [
+						{
+							id: 1,
+							name: '– Espárrago verde',
+						},
+						{
+							id: 2,
+							name: '– Maracuyá',
+						},
+						{
+							id: 3,
+							name: '– Arándano',
+						},
+						{
+							id: 4,
+							name: '– Mango: Kent',
+						},
+					],
+				},
+			],
 			titleProduts: 'PRODUCTOS',
 			btnsProducts: [
 				{
@@ -196,6 +277,7 @@ const i18n = new VueI18n({
 					link: '#contact',
 				},
 			],
+			titleContactFooter: 'Contáctanos',
 		},
 		en: {
 			headerInit: 'HOME',
@@ -317,6 +399,87 @@ const i18n = new VueI18n({
 			],
 			titleQuality: 'QUALITY',
 			titleLineProducts: 'OUR PRODUCTS LINE',
+			lineProducts: [
+				{
+					id: 1,
+					icon: '/static/images/icons/icon-product-one.png',
+					urlImage: '/static/images/section/product-1.png',
+					title: 'Canned',
+					description: 'We make our products complying with the current HACCP system, ensuring safety and sanitary quality, thus offering quality products.',
+					listProd: [
+						{
+							id: 1,
+							name: '– Green asparagus',
+						},
+						{
+							id: 2,
+							name: '– White Asparagus',
+						},
+						{
+							id: 3,
+							name: '– Bell pepper',
+						},
+						{
+							id: 4,
+							name: '– Blueberry',
+						},
+					],
+				},
+				{
+					id: 2,
+					title: 'Fresh',
+					description: 'We bring to your table our line of fresh products, direct from the field, complying with Good Manufacturing Practices (GMP) and quality.',
+					icon: '/static/images/icons/icon-product-two.png',
+					urlImage: '/static/images/section/product-2.png',
+					listProd: [
+						{
+							id: 1,
+							name: '– Green asparagus',
+						},
+						{
+							id: 2,
+							name: '– Passion frui',
+						},
+						{
+							id: 3,
+							name: '– Blueberry',
+						},
+						{
+							id: 4,
+							name: '– Handle: Kent',
+						},
+						{
+							id: 5,
+							name: '– Avocado: Hass and strong',
+						},
+					],
+				},
+				{
+					id: 3,
+					title: 'Frozen',
+					description: 'We bring our frozen food line to your table, complying with quality and safety guidelines.',
+					urlImage: '/static/images/section/product-3.png',
+					icon: '/static/images/icons/icon-product-three.png',
+					listProd: [
+						{
+							id: 1,
+							name: '- Green asparagus',
+						},
+						{
+							id: 2,
+							name: '– Passion fruit',
+						},
+						{
+							id: 3,
+							name: '– Blueberry',
+						},
+						{
+							id: 4,
+							name: '– Handle: Kent',
+						},
+					],
+				},
+			],
 			titleProduts: 'PRODUCTS',
 			btnsProducts: [
 				{
@@ -386,6 +549,7 @@ const i18n = new VueI18n({
 					link: '#contact',
 				},
 			],
+			titleContactFooter: 'Contac Us',
 		},
 	},
 });

@@ -91,7 +91,7 @@
 							<div>
 								<button button @click="setLocale(data.item.lan)">
 									<flag :iso="data.item.icon"></flag>
-									<span>{{data.item.name}}</span>
+									<span class="ml-2">{{data.item.name}}</span>
 								</button>
 							</div>
 						</template>
@@ -401,7 +401,7 @@ export default {
 
 	.width-desktop {
 		@media (min-width: 936px) {
-			width: 110px;
+			width: 100px;
 		}
 	}
 </style>

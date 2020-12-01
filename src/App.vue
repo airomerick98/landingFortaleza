@@ -1425,6 +1425,14 @@ button:disabled {
 	min-width: 200px !important;
 }
 
+.list__tile--link {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.list {
+	padding: 0 6px;
+}
+
 .section-quality {
 	.slider-items {
 		text-align: center;
@@ -1432,6 +1440,15 @@ button:disabled {
 
 	.slider-indicators-center {
 		display: none;
+	}
+}
+
+.section-quality {
+	.slider {
+		@media (min-width: 936px) {
+			margin: 0 auto !important;
+			width: 40% !important;
+		}
 	}
 }
 </style>

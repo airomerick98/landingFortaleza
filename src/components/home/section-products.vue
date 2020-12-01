@@ -2,7 +2,11 @@
 	<div class="section-products" id="products">
 		<v-flex text-xs-center class="bold title-section-products">{{$t('titleProduts')}}</v-flex>
 		<div class="content-buttons">
-			<button class="btn-us" v-for="(btn, index) in $t('btnsProducts')" :key="index">{{btn.name}}</button>
+			<button
+			:class="{ 'active': btn.id ===  btnSelected}"
+			class="btn-us"
+			v-for="(btn, index) in $t('btnsProducts')"
+			:key="index">{{btn.name}}</button>
 		</div>
 		<div class="content-product">
 			<div class="content-title">
@@ -132,8 +136,136 @@
 </template>
 
 <script>
+function data() {
+	return {
+		btnSelected: 1,
+		products: [
+			{
+				id: 1,
+				titleBlack: 'ESPÁRRAGO',
+				titleGreen: 'VERDE',
+				listProperties: [
+					{
+						id: 1,
+						name: 'Tiene una gran cantidad de vitaminas:',
+						bold: 'A, B1, B2, B6, C Y E.',
+					},
+					{
+						id: 2,
+						name: 'Tiene minerales como:',
+						bold: 'magnesio, fósforo, calcio y potasio.',
+					},
+					{
+						id: 3,
+						name: 'Alta cantidad de',
+						bold: 'antioxidantes.',
+					},
+				],
+			},
+			{
+				id: 2,
+				titleBlack: 'ESPÁRRAGO',
+				titleGreen: 'BLANCO',
+				listProperties: [
+					{
+						id: 1,
+						name: 'Tiene una gran cantidad de vitaminas:',
+						bold: 'A, B1, B2, B6, C Y E.',
+					},
+					{
+						id: 2,
+						name: 'Tiene minerales como:',
+						bold: 'magnesio, fósforo, calcio y potasio.',
+					},
+					{
+						id: 3,
+						name: 'Alta cantidad de',
+						bold: ' antioxidantes.',
+					},
+				],
+			},
+			{
+				id: 3,
+				titleBlack: 'PIMIENTO',
+				titleGreen: 'MORRÓN',
+				listProperties: [
+					{
+						id: 1,
+						name: 'Por su alto contenido de potasio, el morrón en un',
+						bold: 'excelente diurético',
+					},
+					{
+						id: 2,
+						name: 'Ayuda a',
+						bold: 'bajar de peso',
+					},
+					{
+						id: 3,
+						name: 'Tiene un bajo aporte de calorías:',
+						bold: 'sólo 20 calorías cada 100 gramos',
+					},
+				],
+			},
+			{
+				id: 4,
+				titleGreen: 'MARACUYÁ',
+				listProperties: [
+					{
+						id: 1,
+						name: 'Ayuda a',
+						bold: 'reducir la presión arterial.',
+					},
+					{
+						id: 2,
+						bold: 'Rica en vitaminas A y C antioxidantes,',
+						name: 'alto contenido de hierro y flavonoides.',
+					},
+					{
+						id: 3,
+						name: 'Estimulante natural y suplemento dietético práctico,',
+						bold: 'aumenta el metabolismo.',
+					},
+				],
+			},
+			{
+				id: 5,
+				titleGreen: 'ARÁNDANOS',
+				listProperties: [
+					{
+						id: 1,
+						name: 'Favorece a la',
+						bold: 'familia de los berries.',
+					},
+					{
+						id: 2,
+						name: 'Muy bajo en calorías, gran contenido de fibra,',
+						bold: 'vitamina C y K.',
+					},
+					{
+						id: 3,
+						name: 'Tienen la capacidad antioxidante, con los flavonoides como principales antioxidantes presentes',
+					},
+				],
+			},
+			{
+				id: 6,
+				titleBlack: 'MANGO',
+				titleGreen: 'KENT',
+				listProperties: [
+					{
+						id: 1,
+						name: 'Fruta rica en vitamina',
+						bold: 'A, C Y E',
+					},
+				],
+			},
+		],
+	};
+}
+
 export default {
 	name: 'section-products',
+	data,
 };
 </script>
 
@@ -145,6 +277,7 @@ export default {
 .title-section-products {
 	color: #878787;
 	font-size: 25px;
+	margin-bottom: 41px;
 
 	@media (min-width: 936px) {
 		font-size: 33px;
@@ -159,7 +292,17 @@ export default {
 	font-size: 14px;
 	font-weight: 500;
 	height: 44px;
-	width: 137px;
+	margin-left: 21px;
+	padding: 0 32px;
+
+	&.active {
+		background-color: #66cc33;
+		color: white;
+	}
+
+	&:first-child {
+		margin-left: 0;
+	}
 
 	@media (min-width: 936px) {
 		margin-left: 20px;
@@ -171,6 +314,10 @@ export default {
 	border-radius: 31.5px;
 	margin-bottom: 39px;
 	padding: 9px 0 9px 11px;
+	overflow: auto;
+	overflow-y: hidden;
+	margin: 0 auto;
+	white-space: nowrap;
 
 	@media (min-width: 936px) {
 		background-color: transparent;

@@ -2,64 +2,23 @@
   <div class="section-line-products">
 		<v-flex class="title-line-products bold" text-xs-center>{{$t('titleLineProducts')}}</v-flex>
 		<div class="content-image-products">
-			<div class="content-image-one center">
+			<div class="content-image-one center"
+			v-for="(item , index) in $t('lineProducts')"
+			:key="index"
+			:style="`background-image: url(${item.urlImage})`">
 				<div class="opacity-image"></div>
 				<div class="row-hover">
 					<div>
-						<img src="/static/images/icons/icon-product-one.png" alt="icono-primer-producto" class="icon-line-products">
+						<img :src="item.icon" alt="icono-primer-producto" class="icon-line-products">
 					</div>
 					<div>
-						<p class="title-section-image bold">Conservas</p>
+						<p class="title-section-image bold">{{item.title}}</p>
 					</div>
 				</div>
 				<div class="text-hover bold">
-					Elaboramos nuestros productos cumpliendo con el sistema vigente HACCP, asegurando la inocuidad y calidad sanitaria, ofreciendo así productos de calidad.
+					{{item.description}}
 					<ul class="list-none">
-						<li>– Espárragos Verdes</li>
-						<li>– Espárragos Blancos</li>
-						<li>– Pimiento Morrón</li>
-						<li>– Arándano</li>
-					</ul>
-				</div>
-			</div>
-			<div class="content-image-two center">
-				<div class="opacity-image"></div>
-				<div class="row-hover">
-					<div>
-						<img src="/static/images/icons/icon-product-two.png" alt="icono-segundo-producto" class="icon-line-products">
-					</div>
-					<div>
-						<p class="title-section-image bold">Frescos</p>
-					</div>
-				</div>
-				<div class="text-hover bold">
-					Llevamos a tu mesa nuestra línea de productos frescos, directos del campo, cumpliendo con las Buenas Prácticas de Manufactura (BPM) y calidad.
-						<ul  class="list-none">
-							<li>– Espárrago verde</li>
-							<li>– Maracuyá</li>
-							<li>– Arándano</li>
-							<li>– Mango: Kent</li>
-							<li>– Palta: Hass y fuerte</li>
-						</ul>
-				</div>
-			</div>
-			<div class="content-image-three center">
-				<div class="opacity-image"></div>
-				<div class="row-hover">
-					<div>
-						<img src="/static/images/icons/icon-product-three.png" alt="icono-tercer-producto" class="icon-line-products">
-					</div>
-					<div>
-						<p class="title-section-image bold">Congelados</p>
-					</div>
-				</div>
-				<div class="text-hover bold">
-					Llevamos a tu mesa nuestra línea de congelados, cumpliendo con los lineamientos de calidad e inocuidad.
-					<ul class="list-none">
-						<li>– Espárrago verde</li>
-						<li>– Maracuyá</li>
-						<li>– Arándano</li>
-						<li>– Mango: Kent</li>
+						<li v-for="i in item.listProd" :key="i.id">{{i.name}}</li>
 					</ul>
 				</div>
 			</div>
@@ -84,7 +43,69 @@ function data() {
 					},
 					{
 						id: 2,
-						name: '',
+						name: '– Espárragos Blancos',
+					},
+					{
+						id: 3,
+						name: '– Pimiento Morrón',
+					},
+					{
+						id: 4,
+						name: '– Arándano',
+					},
+				],
+			},
+			{
+				id: 2,
+				title: 'Frescos',
+				description: 'Llevamos a tu mesa nuestra línea de productos frescos, directos del campo, cumpliendo con las Buenas Prácticas de Manufactura (BPM) y calidad.',
+				icon: '/static/images/icons/icon-product-two.png',
+				urlImage: '/static/images/section/product-2.png',
+				listProd: [
+					{
+						id: 1,
+						name: '– Espárrago verde',
+					},
+					{
+						id: 2,
+						name: '– Maracuyá',
+					},
+					{
+						id: 3,
+						name: '– Arándano',
+					},
+					{
+						id: 4,
+						name: '– Mango: Kent',
+					},
+					{
+						id: 5,
+						name: '– Palta: Hass y fuerte',
+					},
+				],
+			},
+			{
+				id: 3,
+				title: 'Congelados',
+				description: 'Llevamos a tu mesa nuestra línea de congelados, cumpliendo con los lineamientos de calidad e inocuidad.',
+				urlImage: '/static/images/section/product-3.png',
+				icon: '/static/images/icons/icon-product-three.png',
+				listProd: [
+					{
+						id: 1,
+						name: '– Espárrago verde',
+					},
+					{
+						id: 2,
+						name: '– Maracuyá',
+					},
+					{
+						id: 3,
+						name: '– Arándano',
+					},
+					{
+						id: 4,
+						name: '– Mango: Kent',
 					},
 				],
 			},
@@ -136,7 +157,7 @@ export default {
 }
 
 .content-image-one {
-	background-image: url('/static/images/section/product-1.png');
+	// background-image: url('/static/images/section/product-1.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;

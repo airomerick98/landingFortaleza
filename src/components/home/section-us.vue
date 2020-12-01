@@ -1,7 +1,7 @@
 <template>
 	<div id="contact-us">
 		<v-flex class="section-us-title bold" text-xs-center>{{$t('titleContactUs')}}</v-flex>
-		<div>
+		<div class="pl-6-mobile">
 			<div class="content-buttons">
 				<button
 				:class="{'active' : item.id === btnSelected}"
@@ -115,7 +115,6 @@ export default {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 314px;
 	padding: 60px 63px;
 	width: 100%;
 
@@ -189,7 +188,12 @@ export default {
 	font-size: 14px;
 	font-weight: 500;
 	height: 44px;
+	margin-left: 20px;
 	width: 137px;
+
+	&:first-child {
+		margin-left: 0;
+	}
 
 	&.active {
 		background-color: #66cc33;
@@ -205,12 +209,24 @@ export default {
 	background-color: #fafafa;
 	padding: 9px 0 9px 11px;
   	border-radius: 31.5px;
+	overflow: auto;
+    overflow-y: hidden;
+    margin: 0 auto;
+    white-space: nowrap;
 
 	@media (min-width: 936px) {
 		background-color: transparent;
 		display: flex;
 		margin: 40px auto 0 auto;
 		justify-content: center;
+	}
+}
+
+.pl-6-mobile {
+	padding-left: 6px;
+
+	@media (min-width: 936px) {
+		padding: 0;
 	}
 }
 </style>
