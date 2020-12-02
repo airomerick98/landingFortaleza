@@ -14,43 +14,21 @@
 							{{i.name}}
 						</button>
 					</div>
-						<!-- <button
-							class="app-header-container-menu-item"
-							type="button"
-						>
-							NOSOTROS
-						</button>
-						<button
-							class="app-header-container-menu-item"
-							type="button"
-						>
-							CALIDAD
-						</button>
-						<button
-							class="app-header-container-menu-item"
-							type="button"
-						>
-							PRODUCTOS
-						</button>
-						<button
-							class="app-header-container-menu-item"
-							type="button"
-						>
-							MERCADOS
-						</button>
-						<button
-							class="app-header-container-menu-item"
-							type="button"
-						>
-							CONTACTO
-						</button> -->
+					<div class="content-network-menu">
+						<a href="https://www.facebook.com/FortalezadelNortePeru/" target="_blank">
+							<img src="/static/images/icons/icon-fb.svg" alt="icono-facebook" height="40">
+						</a>
+						<a href="http://linkedin.com/company/la-fortaleza-del-norte-s-a-c" target="_blank" class="ml-4">
+							<img src="/static/images/icons/icon-linkedin.svg" alt="icono-linkedin" height="40">
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="br-desktop app-header-container-button">
 				<button type="button" @click="toogleMenu" class="app-header-button">
 				<img
 					v-if="open"
-					src="/static/images/icons/close.svg"
+					src="/static/images/icons/close (2).svg"
 					alt="boton para cerrar menu"
 					height="15">
 					<img
@@ -64,14 +42,14 @@
 				<v-layout row align-center>
 					<v-flex>
 					<v-layout row align-center class="menu-header">
-					<v-flex v-for="(item, index) in $t('links')" class="px-1 width-desktop" :key="index">
+					<v-flex v-for="(item, index) in $t('links')" class="px-3" :key="index">
 						<a :href="item.link" class="link-header">
 							{{item.name}}
 						</a>
 					</v-flex>
 				</v-layout>
 				</v-flex>
-				<v-flex xs8>
+				<v-flex xs6>
 					<v-select
 						class="input-component br-mobile "
 						v-model="country"
@@ -104,18 +82,6 @@
 				<a href="#" @click="setLocale('en')"><flag iso="us"></flag></a>
 			</div> -->
 		</div>
-		<!-- <v-flex xs12 align-center md3 lg4 sm2>
-			<img src="/static/images/icons/logo-fortaleza.svg" alt="logo" class="logo-fortaleza">
-		</v-flex> -->
-		<!-- <v-flex d-flex xs12 md9 lg8 align-center class="menu-container">
-			<v-layout align-center wrap class="menu-header">
-				<v-flex v-for="(item, index) in links" :key="index">
-					<a href="" class="link-header">
-						{{item.name}}
-					</a>
-				</v-flex>
-			</v-layout>
-		</v-flex>	 -->
 	</v-layout>
 </template>
 
@@ -143,17 +109,17 @@ function data() {
 		languages: [
 			{
 				id: 1,
-				name: 'Español',
+				name: 'ES',
 				lan: 'es',
 				icon: 'pe',
-				value: 'Español',
+				value: 'ES',
 			},
 			{
 				id: 2,
-				name: 'English',
+				name: 'EN',
 				lan: 'en',
 				icon: 'us',
-				value: 'English',
+				value: 'EN',
 			},
 		],
 	};
@@ -200,8 +166,8 @@ export default {
 .app-header {
 		background-color: color(white);
 		box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
-		height: 54px;
-		padding: 11px 17px;
+		height: 70px;
+		padding: 18px 18px 22px 25px;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -213,7 +179,7 @@ export default {
 		}
 
 		@media (min-width: 1204px) {
-			padding: 27px 10%;
+			padding: 27px 9%;
 		}
 
 		&-logo {
@@ -237,7 +203,7 @@ export default {
 				background-color: color(white);
 				height: calc(100vh - 56px);
 				left: 0;
-				padding: 0px 15px;
+				padding: 22px 15px 0 15px;
 				position: absolute;
 				top: 54px;
 				width: 100%;
@@ -403,5 +369,12 @@ export default {
 		@media (min-width: 936px) {
 			width: 100px;
 		}
+	}
+
+	.content-network-menu {
+		bottom: 26px;
+		left: 50%;
+		position: absolute;
+		transform: translateX(-50%);
 	}
 </style>

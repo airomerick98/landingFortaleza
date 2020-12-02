@@ -209,6 +209,44 @@ const i18n = new VueI18n({
 				},
 			],
 			titleProduts: 'PRODUCTOS',
+			titleEs: 'ESPÁRRAGO',
+			titleEsGreen: 'VERDE',
+			titlePres: 'Presentación:',
+			listPresents: [
+				{
+					id: 1,
+					name: 'Vidrio',
+					icon: '/static/images/icons/icon-present-one-es.svg',
+				},
+				{
+					id: 2,
+					name: 'Lata',
+					icon: '/static/images/icons/icon-present-two-es.svg',
+				},
+				{
+					id: 3,
+					name: 'Marca Privada',
+					icon: '/static/images/icons/icon-present-three-es.svg',
+				},
+			],
+			listDisp: [
+				{
+					id: 1,
+					name: 'Fresco',
+					icon: '/static/images/icons/icon-product-one.svg',
+				},
+				{
+					id: 2,
+					name: 'Congelados',
+					icon: '/static/images/icons/icon-product-two-es.svg',
+				},
+				{
+					id: 3,
+					name: 'Conservas',
+					icon: '/static/images/icons/icon-three-es.svg',
+				},
+			],
+			titleDis: 'Disponible',
 			btnsProducts: [
 				{
 					id: 1,
@@ -481,6 +519,44 @@ const i18n = new VueI18n({
 				},
 			],
 			titleProduts: 'PRODUCTS',
+			titleEs: 'ASPARAGUS',
+			titleEsGreen: 'GREEN',
+			titlePres: 'Presentation:',
+			listPresents: [
+				{
+					id: 1,
+					name: 'Glass',
+					icon: '/static/images/icons/icon-present-one-es.svg',
+				},
+				{
+					id: 2,
+					name: 'Can',
+					icon: '/static/images/icons/icon-present-two-es.svg',
+				},
+				{
+					id: 3,
+					name: 'Private Label',
+					icon: '/static/images/icons/icon-present-three-es.svg',
+				},
+			],
+			titleDis: 'Available',
+			listDisp: [
+				{
+					id: 1,
+					name: 'Fresh',
+					icon: '/static/images/icons/icon-product-one.svg',
+				},
+				{
+					id: 2,
+					name: 'Frozen',
+					icon: '/static/images/icons/icon-product-two-es.svg',
+				},
+				{
+					id: 3,
+					name: 'Canned',
+					icon: '/static/images/icons/icon-three-es.svg',
+				},
+			],
 			btnsProducts: [
 				{
 					id: 1,

@@ -15,14 +15,14 @@
 		<!-- vif="btnSelected === item.id" -->
 		<div class="banner-section-us" v-if="btnSelected === 1">
 			<p class="bold title-tab-us">{{$t('titleAboutUs')}}</p>
-			<p class="bold description-tab-us">
+			<p class="description-tab-us">
 				{{$t('descriptionAboutUs')}}
 			</p>
 		</div>
 		<div class="banner-section-us" v-if="btnSelected === 2">
 			<div v-for="(min, index) in $t('arrayVision')" :key="index">
 				<p class="bold title-tab-us">{{min.title}}</p>
-				<p class="bold description-tab-us">
+				<p class="description-tab-us">
 					{{min.description}}
 				</p>
 			</div>
@@ -31,18 +31,18 @@
 			<p class="bold title-tab-us">{{ $t('titleValue') }}</p>
 			<v-flex align-center v-for="(val, index) in $t('values')" :key="index">
 				<img src="/static/images/icons/check-mark.svg" class="pr-1" alt="icono-check">
-				<span class="bold description-tab-us">{{val.name}}</span>
+				<span class="description-tab-us">{{val.name}}</span>
 			</v-flex>
 		</div>
 		<div class="banner-section-us-camp" v-if="btnSelected === 4">
 			<p class="bold title-tab-us">{{$t('titleCamp')}}</p>
-			<p class="bold description-tab-us">
+			<p class="description-tab-us">
 				{{$t('descriptionCamp')}}
 			</p>
 		</div>
 		<div class="banner-section-us-plant" v-if="btnSelected === 5">
 			<p class="bold title-tab-us">{{$t('titleProcess')}}</p>
-			<p class="bold description-tab-us">
+			<p class="description-tab-us">
 				{{$t('descriptionProcess')}}
 			</p>
 		</div>
@@ -164,6 +164,7 @@ export default {
 	text-align: center;
 
 	@media (min-width: 936px) {
+		font-size: 30px;
 		text-align: left;
 	}
 }
@@ -175,6 +176,8 @@ export default {
 	text-align: center;
 
 	@media (min-width: 936px) {
+		font-size: 15px;
+		line-height: 20px;
 		text-align: left;
 		max-width: 450px;
 	}

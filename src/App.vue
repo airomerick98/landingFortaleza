@@ -1420,9 +1420,11 @@ button:disabled {
 }
 
 .menu__content {
-    top: 40px !important;
-	left: -100px !important;
-	min-width: 200px !important;
+	border-radius: 8px;
+  	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18);
+    top: 42px !important;
+	left: -63px !important;
+	min-width: 120px !important;
 }
 
 .list__tile--link {

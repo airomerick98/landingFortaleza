@@ -25,28 +25,8 @@
 // import appHeader from '@/components/home/app-header';
 import appFooter from '@/components/home/app-footer';
 
-function data() {
-	return {
-		languages: [
-			{
-				id: 1,
-				lan: 'es',
-				icon: 'pe',
-				value: 'Español',
-			},
-			{
-				id: 2,
-				icon: 'us',
-				lang: 'en',
-				value: 'English',
-			},
-		],
-	};
-}
-
 export default {
 	name: 'layout-general',
-	data,
 	components: {
 		// appHeader,
 		appFooter,

@@ -3,7 +3,7 @@
 		<v-flex class="title-section-quality bold" text-xs-center>
 			{{$t('titleQuality')}}
 		</v-flex>
-		<v-flex text-xs-center class="description-section-quality bold">
+		<v-flex text-xs-center class="description-section-quality">
 			Fortaleza del Norte ha logrado implementar de manera efectiva su Sistema Integrado de Gestión (SIG) que incluye 3 certificaciones tales como el HACCP,
 				BRC y GLOBAL GAP. Con estas certificaciones, Fortaleza del Norte evidencia su compromiso con  los altos estándares de la calidad de sus productos.
 		</v-flex>
@@ -82,6 +82,8 @@ export default {
 	margin: 19px 0 58px 0;
 
 	@media (min-width: 936px) {
+		font-size: 15px;
+		line-height: 20px;
 		margin: 39px auto 52px auto;
 		max-width: 600px;
 	}
