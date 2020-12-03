@@ -13,10 +13,10 @@
 				</div>
 			</div>
 			<slider
+				:control-btn="false"
 				height="100vh"
 				animation="fade"
 				:speed="5000"
-				:control-btn="false"
 				width="100%"
 			>
 				<slider-item v-for="(item, index) in $t('banners')" :key="index">

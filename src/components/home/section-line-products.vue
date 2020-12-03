@@ -15,7 +15,7 @@
 						<p class="title-section-image bold">{{item.title}}</p>
 					</div>
 				</div>
-				<div class="text-hover bold">
+				<div class="text-hover">
 					{{item.description}}
 					<ul class="list-none">
 						<li v-for="i in item.listProd" :key="i.id">{{i.name}}</li>
@@ -157,7 +157,6 @@ export default {
 }
 
 .content-image-one {
-	// background-image: url('/static/images/section/product-1.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -174,13 +173,13 @@ export default {
 		.text-hover {
 			display: block;
 			margin-top: 10px;
-			z-index: 222;
+			z-index: 2;
 		}
 
 		.row-hover {
 			align-items: center;
 			display: flex;
-			z-index: 222;
+			z-index: 2;
 		}
 
 		.title-section-image {
@@ -200,7 +199,7 @@ export default {
 		border-radius: 0;
 		height: 428px;
 		width: 33.3%;
-		z-index: 222;
+		z-index: 2;
 	}
 }
 
@@ -221,7 +220,7 @@ export default {
 		.text-hover {
 			display: block;
 			margin-top: 10px;
-			z-index: 222;
+			z-index: 2;
 		}
 
 		.icon-line-products {
@@ -231,7 +230,7 @@ export default {
 		.row-hover {
 			align-items: center;
 			display: flex;
-			z-index: 222;
+			z-index: 2;
 		}
 
 		.title-section-image {
@@ -267,7 +266,7 @@ export default {
 		.text-hover {
 			display: block;
 			margin-top: 10px;
-			z-index: 222;
+			z-index: 2;
 		}
 
 		.icon-line-products {
@@ -277,7 +276,7 @@ export default {
 		.row-hover {
 			align-items: center;
 			display: flex;
-			z-index: 222;
+			z-index: 2;
 		}
 
 		.title-section-image {
@@ -310,6 +309,10 @@ export default {
 	font-size: 12px;
 	line-height: 18px;
 	text-align: center;
+
+	@media (min-width: 936px) {
+		font-size: 15px;
+	}
 }
 
 .opacity-image {

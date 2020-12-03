@@ -1380,9 +1380,10 @@ button:disabled {
 }
 
 .banner {
-	.slider-indicators-center {
-		display: none;
-	}
+	// .slider-indicators-center {
+	// 		display: b;	
+	// 	}
+	// }
 
 	.slider-items {
 		height: 100vh !important;
@@ -1447,6 +1448,8 @@ button:disabled {
 
 .section-quality {
 	.slider {
+		height: 117px !important;
+
 		@media (min-width: 936px) {
 			margin: 0 auto !important;
 			width: 40% !important;

@@ -7,12 +7,15 @@
 				</a>
 				<div v-if="open" class="app-header-container-column">
 					<div v-for="(i, index) in $t('links')" :key="index">
-						<button
-							class="app-header-container-menu-item"
-							type="button"
-						>
-							{{i.name}}
-						</button>
+						<a :href="i.link">
+							<button
+								@click="directLink"
+								class="app-header-container-menu-item"
+								type="button"
+							>
+								{{i.name}}
+							</button>
+						</a>
 					</div>
 					<div class="content-network-menu">
 						<a href="https://www.facebook.com/FortalezadelNortePeru/" target="_blank">
@@ -38,18 +41,18 @@
 					height="15">
 				</button>
 			</div>
-			<div>
+			<v-flex xs9>
 				<v-layout row align-center>
 					<v-flex>
-					<v-layout row align-center class="menu-header">
-					<v-flex v-for="(item, index) in $t('links')" class="px-3" :key="index">
-						<a :href="item.link" class="link-header">
-							{{item.name}}
-						</a>
-					</v-flex>
-				</v-layout>
+						<v-layout row align-center class="menu-header">
+						<v-flex v-for="(item, index) in $t('links')" class="px-1" :key="index">
+							<a :href="item.link" class="link-header">
+								{{item.name}}
+							</a>
+						</v-flex>
+					</v-layout>
 				</v-flex>
-				<v-flex xs6>
+				<v-flex xs2>
 					<v-select
 						class="input-component br-mobile "
 						v-model="country"
@@ -76,7 +79,7 @@
 					</v-select>
 				</v-flex>
 				</v-layout>
-			</div>
+			</v-flex>
 			<!-- <div>
 				<a href="#" @click="setLocale('es')"><flag iso="pe"></flag></a>
 				<a href="#" @click="setLocale('en')"><flag iso="us"></flag></a>
@@ -92,6 +95,10 @@ function created() {
 
 function toogleMenu() {
 	this.open = !this.open;
+}
+
+function directLink() {
+	this.open = false;
 }
 
 function setLocale(locale) {
@@ -130,6 +137,7 @@ export default {
 	created,
 	data,
 	methods: {
+		directLink,
 		setLocale,
 		toogleMenu,
 	},
@@ -372,7 +380,7 @@ export default {
 	}
 
 	.content-network-menu {
-		bottom: 26px;
+		bottom: 50px;
 		left: 50%;
 		position: absolute;
 		transform: translateX(-50%);

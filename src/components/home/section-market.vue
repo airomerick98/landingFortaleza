@@ -5,10 +5,10 @@
 			{{$t('descriptionMarket')}}
 		</v-flex>
 		<div class="content-image">
-			<img src="/static/images/banners/mapa-market.png" alt="imagen-mapa" class="br-mobile content-image">
+			<img :src="$t('imageDesktopMarket')" alt="imagen-mapa" class="br-mobile content-image">
 		</div>
 		<div class="content-image">
-			<img src="/static/images/banners/section-market-mobile.png" alt="image-mapa-mobile" class="br-desktop">
+			<img :src="$t('imageMobileMarket')" alt="image-mapa-mobile" class="br-desktop">
 		</div>
 	</div>
 </template>
@@ -43,7 +43,7 @@ export default {
 	color: #585858;
 	font-size: 14px;
 	line-height: 18px;
-	margin: 41px 0 70px 0;
+	margin: 41px 0 50px 0;
 	padding: 0 40px;
 
 	@media (min-width: 936px) {
@@ -53,7 +53,7 @@ export default {
 }
 
 .content-image {
-	padding: 0 65px;
+	// padding: 0 55px;
 	width: 100%;
 
 	@media (min-width: 936px) {

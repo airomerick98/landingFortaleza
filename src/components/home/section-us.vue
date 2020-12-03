@@ -19,7 +19,7 @@
 				{{$t('descriptionAboutUs')}}
 			</p>
 		</div>
-		<div class="banner-section-us" v-if="btnSelected === 2">
+		<div class="banner-section-us pd-two-us" v-if="btnSelected === 2">
 			<div v-for="(min, index) in $t('arrayVision')" :key="index">
 				<p class="bold title-tab-us">{{min.title}}</p>
 				<p class="description-tab-us">
@@ -165,6 +165,7 @@ export default {
 
 	@media (min-width: 936px) {
 		font-size: 30px;
+		margin-bottom: 22px;
 		text-align: left;
 	}
 }
@@ -231,5 +232,9 @@ export default {
 	@media (min-width: 936px) {
 		padding: 0;
 	}
+}
+
+.pd-two-us {
+	padding-top: 145px !important;
 }
 </style>

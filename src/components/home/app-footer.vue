@@ -1,5 +1,12 @@
 <template>
 	<div class="app-footer">
+		<div class="content-btn-top">
+			<a href="#banner-home">
+				<button>
+					<img src="/static/images/icons/btn-footer-top.svg" alt="">
+				</button>
+			</a>
+		</div>
 		<div class="content-footer">
 			<div class="content-mobile">
 				<v-flex class="wd-25">
@@ -77,7 +84,7 @@ export default {
 
 <style lang="scss" scoped>
 .app-footer {
-	background-image: url('/static/images/banners/banner-footer-mobile.png');
+	background-image: url('/static/images/banners/banner-footer-mobile.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -85,7 +92,7 @@ export default {
 	width: 100%;
 
 	@media (min-width: 936px) {
-		background-image: url('/static/images/banners/banner-footer.png');
+		background-image: url('/static/images/banners/banner-footer.jpg');
 		height: 470px;
 	}
 }
@@ -177,6 +184,17 @@ export default {
 .wd-50 {
 	@media (min-width: 936px) {
 		width: 45%;
+	}
+}
+
+.content-btn-top {
+	bottom: 100px;
+	right: 12px;
+	position: absolute;
+
+	@media (min-width: 936px) {
+		bottom: 42px;
+		right: 49px;	
 	}
 }
 </style>

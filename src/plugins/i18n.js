@@ -44,13 +44,13 @@ const i18n = new VueI18n({
 			banners: [
 				{
 					id: 1,
-					url: '/static/images/banners/image-banner-one.png',
+					url: '/static/images/banners/image-banner-one.jpg',
 					textBold: 'DEL CAMPO',
 					text: 'A TU MESA',
 				},
 				{
 					id: 2,
-					url: '/static/images/banners/image-banner-two.png',
+					url: '/static/images/banners/image-banner-two.jpg',
 					textBold: 'COMERCIALIZAMOS',
 					text: 'LAS MEJORES FRUTAS',
 				},
@@ -58,7 +58,7 @@ const i18n = new VueI18n({
 					id: 3,
 					textBold: 'COMERCIALIZAMOS',
 					text: 'LOS MEJORES ESPARRAGOS',
-					url: '/static/images/banners/image-banner-three.png',
+					url: '/static/images/banners/image-banner-three.jpg',
 				},
 			],
 			titleContactUs: 'NOSOTROS',
@@ -274,6 +274,7 @@ const i18n = new VueI18n({
 				},
 			],
 			titleMarket: 'MERCADOS',
+			imageDesktopMarket: '/static/images/banners/mapa-market.png',
 			descriptionMarket: 'Somos socios estratégicos de las marcas de alimentos y supermercados más exigentes del mundo. Hemos estado cultivando relaciones comerciales a largo plazo basadas en la competitividad de nuestro equipo de trabajo, nuestro producto de calidad y la sostenibilidad de nuestro negocio.',
 			titleContact: 'CONTÁCTANOS',
 			placeholderName: 'Nombre *',
@@ -283,6 +284,7 @@ const i18n = new VueI18n({
 			btnTitleContact: 'Enviar',
 			titleFind: 'Encuéntranos',
 			titleInformation: 'Información',
+			imageMobileMarket: '/static/images/banners/section-market-mobile.png',
 			linksFooter: [
 				{
 					id: 1,
@@ -584,6 +586,7 @@ const i18n = new VueI18n({
 				},
 			],
 			titleMarket: 'MARKETS',
+			imageDesktopMarket: '/static/images/banners/mapa-market-en.png',
 			descriptionMarket: 'We are strategic partners of the most demanding food brands and supermarkets in the world. We have been cultivating long-term business relationships based on the competitiveness of our work team, our quality product and the sustainability of our business.',
 			titleContact: 'CONTACT US',
 			placeholderName: 'Name *',
@@ -626,6 +629,7 @@ const i18n = new VueI18n({
 				},
 			],
 			titleContactFooter: 'Contac Us',
+			imageMobileMarket: '/static/images/banners/image-market-mobile-es.png',
 		},
 	},
 });
