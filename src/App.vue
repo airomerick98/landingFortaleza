@@ -1456,4 +1456,8 @@ button:disabled {
 		}
 	}
 }
+
+.relative {
+	position: relative;
+}
 </style>

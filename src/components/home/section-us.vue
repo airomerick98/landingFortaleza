@@ -102,10 +102,12 @@ export default {
 .section-us-title {
 	color: #878787;
 	font-size: 25px;
+	margin-bottom: 25px;
 	padding-top: 49px; 
 
 	@media (min-width: 936px) {
 		font-size: 33px;
+		margin-bottom: 40px;
 		padding-top: 97px;
 	}
 }

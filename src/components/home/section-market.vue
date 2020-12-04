@@ -21,8 +21,8 @@ export default {
 
 <style lang="scss" scoped>
 .section-market {
-	background-color: linear-gradient(to bottom, #ffffff, #fdfdfd 45%, #e8e8e8);
-	padding: 40px 0 60px 0;
+	background-color: linear-gradient(to bottom, #ffffff, #fdfdfd 45%, #e8e8e8) !important;
+	padding: 25px 0 60px 0;
 
 	@media (min-width: 936px) {
 		background-color: none;
@@ -53,7 +53,7 @@ export default {
 }
 
 .content-image {
-	// padding: 0 55px;
+	padding: 0 55px;
 	width: 100%;
 
 	@media (min-width: 936px) {

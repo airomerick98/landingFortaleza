@@ -3,6 +3,7 @@
 		<v-flex text-xs-center class="bold title-section-products">{{$t('titleProduts')}}</v-flex>
 		<div class="content-buttons">
 			<button
+			:style="`width: ${btn.width};`"
 			@click="selectProduct(btn.id)"
 			:class="{ 'active': btn.id ===  btnSelected}"
 			class="btn-us"
@@ -13,14 +14,14 @@
 		class="content-product">
 			<div v-if="btnSelected === 1">
 				<div class="content-title">
-					<v-flex xs2>
+					<v-flex xs2 class="cont-title-desktop">
 						<span class="title-product">{{$t('titleEs')}}</span>
 						<span class="title-product-green">{{$t('titleEsGreen')}}</span>
 					</v-flex>
 					<div>
 						<p class="title-list">{{$t('titlePres')}}</p>
 						<ul class="list-dispo">
-							<li v-for="(pres, index) in $t('listPresents')" :key="index" class="content-present">
+							<li v-for="(pres, index) in $t('listPresents')" :key="index" class="content-present pr-3">
 								<v-layout column align-center>
 									<v-flex>
 										<img :src="pres.icon" :alt="pres.name" class="icon-one">
@@ -34,40 +35,18 @@
 					</div>
 				</div>
 				<v-layout row mt-2 class="column-reverse-mobile">
-					<v-flex>
+					<v-flex class="pt-desktop">
 						<div>
-							<ul class="list-none">
-								<p class="title-list br-desktop">Propiedades</p>
-								<li class="mb-product">
-									<v-layout row>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Tiene una gran cantidad de vitaminas:
-											<span class="bold-description">A, B1, B2, B6, C Y E.</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li class="mb-product">
-									<v-layout row align-center>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Tiene minerales como:
-											<span class="bold-description">magnesio, fósforo, calcio y potasio</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li>
+							<ul class="list-none pt-one">
+								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
+								<li class="mb-product" v-for="(pro, index) in $t('listProperties')" :key="index">
 									<v-layout row>
 										<v-flex xs1>
 											<img src="/static/images/icons/check-mark.svg">
 										</v-flex>
-										<v-flex class="item-description">
-											Alta cantidad de
-											<span class="bold-description">antioxidantes</span>
+										<v-flex class="item-description ml-2">
+											{{pro.name}}
+											<span class="bold-description">{{pro.bold}}</span>
 										</v-flex>
 									</v-layout>
 								</li>
@@ -89,7 +68,8 @@
 							</ul>
 						</div>
 					</v-flex>
-					<v-flex>
+					<v-flex class="relative">
+						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeTemporate')}}</button>
 						<img src="/static/images/section/esparrago-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop">
 						<img src="/static/images/section/image-product-one.png" class="w-100 br-mobile" alt="imagen-esparrago">
 					</v-flex>
@@ -98,39 +78,19 @@
 			<div v-if="btnSelected === 2">
 				<div class="content-title">
 					<v-flex xs2>
-						<span class="title-product">ESPÁRRAGO</span>
-						<span class="title-product-green">BLANCO</span>
+						<span class="title-product">{{$t('titleEsWhite')}}</span>
+						<span class="title-product-green">{{$t('titleEs')}}</span>
 					</v-flex>
 					<div>
 						<p class="title-list">{{$t('titlePres')}}</p>
 						<ul class="list-dispo">
-							<li class="content-present">
+							<li v-for="(pres, index) in $t('listPresents')" :key="index" class="content-present pr-3">
 								<v-layout column align-center>
 									<v-flex>
-										<img src="/static/images/icons/icon-present-one-es.svg" alt="" class="icon-one">
+										<img :src="pres.icon" :alt="pres.name" class="icon-one">
 									</v-flex>
 									<v-flex class="title-preset">
-										Vidrio
-									</v-flex>
-								</v-layout>
-							</li>
-							<li class="content-present">
-								<v-layout column align-center>
-									<v-flex>
-										<img src="/static/images/icons/icon-present-two-es.svg" alt="" class="icon-one">
-									</v-flex>
-									<v-flex class="title-preset">
-										Lata
-									</v-flex>
-								</v-layout>
-							</li>
-							<li>
-								<v-layout column align-center>
-									<v-flex>
-										<img src="/static/images/icons/icon-present-three-es.svg" alt="" class="icono-three">
-									</v-flex>
-									<v-flex class="title-preset">
-										Marca Privada
+										{{ pres.name }}
 									</v-flex>
 								</v-layout>
 							</li>
@@ -140,45 +100,23 @@
 				<v-layout row mt-2 class="column-reverse-mobile">
 					<v-flex>
 						<div>
-							<ul class="list-none">
-								<p class="title-list br-desktop">Propiedades</p>
-								<li class="mb-product">
+							<ul class="list-none pt-two">
+								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
+								<li class="mb-product" v-for="(pro, index) in $t('listProperties')" :key="index">
 									<v-layout row>
-										<v-flex>
+										<v-flex xs1>
 											<img src="/static/images/icons/check-mark.svg">
 										</v-flex>
 										<v-flex class="item-description ml-2">
-											Tiene una gran cantidad de vitaminas:
-											<span class="bold-description">A, B1, B2, B6, C Y E.</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li class="mb-product">
-									<v-layout row>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Tiene minerales como:
-											<span class="bold-description">magnesio, fósforo, calcio y potasio</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li>
-									<v-layout row>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Alta cantidad de
-											<span class="bold-description">antioxidantes</span>
+											{{pro.name}}
+											<span class="bold-description">{{pro.bold}}</span>
 										</v-flex>
 									</v-layout>
 								</li>
 							</ul>
 						</div>
 						<div>
-							<p class="title-list mt-disp italic">Disponible</p>
+							<p class="title-list mt-disp italic">{{$t('titleDis')}}</p>
 							<ul class="list-dispo">
 								<li class="content-disp">
 									<v-layout column align-center>
@@ -186,14 +124,15 @@
 											<img src="/static/images/icons/icon-three-es.svg" class="icon-dispo">
 										</v-flex>
 										<v-flex>
-											<span class="text-dispo">Conservas</span>
+											<span class="text-dispo">{{$t('titleConserve')}}</span>
 										</v-flex>
 									</v-layout>
 								</li>
 							</ul>
 						</div>
 					</v-flex>
-					<v-flex>
+					<v-flex class="relative">
+						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeTemporate')}}</button>
 						<img src="/static/images/section/esparragos-blanco-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop">
 						<img src="/static/images/section/img-esparrago-blanco.png" class="w-100 br-mobile" alt="imagen-esparrago">
 					</v-flex>
@@ -201,40 +140,20 @@
 			</div>
 			<div v-if="btnSelected === 3">
 				<div class="content-title">
-					<v-flex xs2>
-						<span class="title-product">PIMIENTO</span>
-						<span class="title-product-green">MORRÓN</span>
+					<v-flex xs5>
+						<span class="title-product">{{$t('titleBlackBell')}}</span>
+						<span class="title-product-green">{{$t('titleGreenBell')}}</span>
 					</v-flex>
 					<div>
-						<p class="title-list">Presentación</p>
+						<p class="title-list">{{$t('titlePres')}}</p>
 						<ul class="list-dispo">
-							<li class="content-present">
+							<li v-for="(pres, index) in $t('listPresents')" :key="index" class="content-present pr-3">
 								<v-layout column align-center>
 									<v-flex>
-										<img src="/static/images/icons/icon-present-one-es.svg" alt="" class="icon-one">
+										<img :src="pres.icon" :alt="pres.name" class="icon-one">
 									</v-flex>
 									<v-flex class="title-preset">
-										Vidrio
-									</v-flex>
-								</v-layout>
-							</li>
-							<li class="content-present">
-								<v-layout column align-center>
-									<v-flex>
-										<img src="/static/images/icons/icon-present-two-es.svg" alt="" class="icon-one">
-									</v-flex>
-									<v-flex class="title-preset">
-										Lata
-									</v-flex>
-								</v-layout>
-							</li>
-							<li>
-								<v-layout column align-center>
-									<v-flex>
-										<img src="/static/images/icons/icon-present-three-es.svg" alt="" class="icono-three">
-									</v-flex>
-									<v-flex class="title-preset">
-										Marca Privada
+										{{ pres.name }}
 									</v-flex>
 								</v-layout>
 							</li>
@@ -244,45 +163,23 @@
 				<v-layout row mt-2 class="column-reverse-mobile">
 					<v-flex>
 						<div>
-							<ul class="list-none">
-								<p class="title-list br-desktop">Propiedades</p>
-								<li class="mb-product">
+							<ul class="list-none pt-three">
+								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
+								<li class="mb-product" v-for="(pim, index) in $t('listPropertiesRed')" :key="index">
 									<v-layout row>
-										<v-flex>
+										<v-flex xs1>
 											<img src="/static/images/icons/check-mark.svg">
 										</v-flex>
 										<v-flex class="item-description ml-2">
-											Por su alto contenido de potasio, el morrón en un
-											<span class="bold-description">excelente diurético</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li class="mb-product">
-									<v-layout row>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Ayuda a
-											<span class="bold-description">bajar de peso</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li>
-									<v-layout row>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Tiene un bajo aporte de calorías:   
-											<span class="bold-description">sólo 20 calorías cada 100 gramos</span>
+											{{pim.name}}
+											<span class="bold-description">{{pim.bold}}</span>
 										</v-flex>
 									</v-layout>
 								</li>
 							</ul>
 						</div>
 						<div>
-							<p class="title-list mt-disp italic">Disponible</p>
+							<p class="title-list mt-disp italic">{{$t('titleDis')}}</p>
 							<ul class="list-dispo">
 								<li class="content-disp">
 									<v-layout column align-center>
@@ -290,54 +187,35 @@
 											<img src="/static/images/icons/icon-three-es.svg" class="icon-dispo">
 										</v-flex>
 										<v-flex>
-											<span class="text-dispo">Conservas</span>
+											<span class="text-dispo">{{$t('titleConserve')}}</span>
 										</v-flex>
 									</v-layout>
 								</li>
 							</ul>
 						</div>
 					</v-flex>
-					<v-flex>
-						<img src="/static/images/section/pimiento-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop">
+					<v-flex class="relative">
+						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeTemporateRed')}}</button>
+						<img src="/static/images/section/pimiento-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop img-mobile-pim">
 						<img src="/static/images/section/img-pimiento-morrin.png" class="w-100 br-mobile" alt="imagen-esparrago">
 					</v-flex>
 				</v-layout>
 			</div>
 			<div v-if="btnSelected === 4">
 				<div class="content-title">
-					<v-flex xs2>
-						<span class="title-product-green">MARACUYÁ</span>
+					<v-flex xs8>
+						<span class="title-product-green">{{$t('titleGreenFruit')}}</span>
 					</v-flex>
 					<div>
-						<p class="title-list">Presentación</p>
+						<p class="title-list">{{$t('titlePres')}}</p>
 						<ul class="list-dispo">
-							<li class="content-present">
+							<li v-for="(pres, index) in $t('listPresents')" :key="index" class="content-present pr-3">
 								<v-layout column align-center>
 									<v-flex>
-										<img src="/static/images/icons/icon-present-one-es.svg" alt="" class="icon-one">
+										<img :src="pres.icon" :alt="pres.name" class="icon-one">
 									</v-flex>
 									<v-flex class="title-preset">
-										Vidrio
-									</v-flex>
-								</v-layout>
-							</li>
-							<li class="content-present">
-								<v-layout column align-center>
-									<v-flex>
-										<img src="/static/images/icons/icon-present-two-es.svg" alt="" class="icon-one">
-									</v-flex>
-									<v-flex class="title-preset">
-										Lata
-									</v-flex>
-								</v-layout>
-							</li>
-							<li>
-								<v-layout column align-center>
-									<v-flex>
-										<img src="/static/images/icons/icon-present-three-es.svg" alt="" class="icono-three">
-									</v-flex>
-									<v-flex class="title-preset">
-										Marca Privada
+										{{ pres.name }}
 									</v-flex>
 								</v-layout>
 							</li>
@@ -347,81 +225,40 @@
 				<v-layout row mt-2 class="column-reverse-mobile">
 					<v-flex>
 						<div>
-							<ul class="list-none">
-								<p class="title-list br-desktop">Propiedades</p>
-								<li class="mb-product">
+							<ul class="list-none pt-three">
+								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
+								<li class="mb-product" v-for="(mar, index) in $t('listPropertiesFruit')" :key="index">
 									<v-layout row>
-										<v-flex>
+										<v-flex xs1>
 											<img src="/static/images/icons/check-mark.svg">
 										</v-flex>
 										<v-flex class="item-description ml-2">
-											Ayuda a
-											<span class="bold-description">reducir la presión arterial.</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li class="mb-product">
-									<v-layout row>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Rica en vitaminas A y C antioxidantes, 
-											<span class="bold-description">alto contenido de hierro y flavonoides.</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li>
-									<v-layout row>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Estimulante natural y suplemento dietético práctico,  
-											<span class="bold-description">aumenta el metabolismo.</span>
+											{{mar.name}}
+											<span class="bold-description">{{mar.bold}}</span>
 										</v-flex>
 									</v-layout>
 								</li>
 							</ul>
 						</div>
 						<div>
-							<p class="title-list mt-disp italic">Disponible</p>
+							<p class="title-list mt-disp italic">{{$t('titleDis')}}</p>
 							<ul class="list-dispo">
-								<li>
+								<li class="content-disp" v-for="(disp, index) in $t('listDisp')" :key="index">
 									<v-layout column align-center>
 										<v-flex>
-											<img src="/static/images/icons/icon-product-one.svg" class="icon-dispo">
+											<img :src="disp.icon" class="icon-dispo">
 										</v-flex>
 										<v-flex>
-											<span class="text-dispo">Fresco</span>	
-										</v-flex>
-									</v-layout>
-								</li>
-								<li class="content-disp">
-									<v-layout column align-center>
-										<v-flex>
-											<img src="/static/images/icons/icon-product-two-es.svg" class="icon-dispo">
-										</v-flex>
-										<v-flex>
-											<span class="text-dispo">Congelados</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li class="content-disp">
-									<v-layout column align-center>
-										<v-flex>
-											<img src="/static/images/icons/icon-three-es.svg" class="icon-dispo">
-										</v-flex>
-										<v-flex>
-											<span class="text-dispo">Conservas</span>
+											<span class="text-dispo">{{disp.name}}</span>	
 										</v-flex>
 									</v-layout>
 								</li>
 							</ul>
 						</div>
 					</v-flex>
-					<v-flex>
-						<img src="/static/images/section/maracuya-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop">
+					<v-flex class="relative">
+						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeTemporateMar')}}</button>
+						<img src="/static/images/section/maracuya-mobile.png" alt="imagen-esparrago" class="mobile-image-maracuya br-desktop">
 						<img src="/static/images/section/img-maracuya.png" class="w-100 br-mobile" alt="imagen-esparrago">
 					</v-flex>
 				</v-layout>
@@ -429,120 +266,60 @@
 			<div v-if="btnSelected === 5">
 				<div class="content-title">
 					<v-flex xs2>
-						<span class="title-product-green">ARÁNDANOS</span>
+						<span class="title-product-green">{{$t('titleGreenAran')}}</span>
 					</v-flex>
 					<div>
-						<p class="title-list">Presentación</p>
+						<p class="title-list">{{$t('titlePres')}}</p>
 						<ul class="list-dispo">
-							<li class="content-present">
+							<li v-for="(pres, index) in $t('listPresents')" :key="index" class="content-present pr-3">
 								<v-layout column align-center>
 									<v-flex>
-										<img src="/static/images/icons/icon-present-one-es.svg" alt="" class="icon-one">
+										<img :src="pres.icon" :alt="pres.name" class="icon-one">
 									</v-flex>
 									<v-flex class="title-preset">
-										Vidrio
-									</v-flex>
-								</v-layout>
-							</li>
-							<li class="content-present">
-								<v-layout column align-center>
-									<v-flex>
-										<img src="/static/images/icons/icon-present-two-es.svg" alt="" class="icon-one">
-									</v-flex>
-									<v-flex class="title-preset">
-										Lata
-									</v-flex>
-								</v-layout>
-							</li>
-							<li>
-								<v-layout column align-center>
-									<v-flex>
-										<img src="/static/images/icons/icon-present-three-es.svg" alt="" class="icono-three">
-									</v-flex>
-									<v-flex class="title-preset">
-										Marca Privada
+										{{ pres.name }}
 									</v-flex>
 								</v-layout>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<v-layout row mt-2 class="column-reverse-mobile">
+				<v-layout row class="column-reverse-mobile content-arandanos-desktop">
 					<v-flex>
 						<div>
 							<ul class="list-none">
-								<p class="title-list br-desktop">Propiedades</p>
-								<li class="mb-product">
+								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
+								<li class="mb-product" v-for="(aran, index) in $t('listPropertiesAran')" :key="index">
 									<v-layout row>
-										<v-flex>
+										<v-flex xs1>
 											<img src="/static/images/icons/check-mark.svg">
 										</v-flex>
 										<v-flex class="item-description ml-2">
-											Favorece a la
-											<span class="bold-description">familia de los berries.</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li class="mb-product">
-									<v-layout row>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Muy bajo en calorías, gran contenido de fibra,
-											<span class="bold-description">vitamina C y K.</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li>
-									<v-layout row>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Tienen la capacidad <span class="bold-description">antioxidante</span>, con los flavonoides como principales antioxidantes presentes 
+											{{aran.name}}
+											<span class="bold-description">{{aran.bold}}</span>
 										</v-flex>
 									</v-layout>
 								</li>
 							</ul>
 						</div>
 						<div>
-							<p class="title-list mt-disp italic">Disponible</p>
+							<p class="title-list mt-disp italic">{{$t('titleDis')}}</p>
 							<ul class="list-dispo">
-								<li>
+								<li class="content-disp" v-for="(aranDis, index) in $t('listDisp')" :key="index">
 									<v-layout column align-center>
 										<v-flex>
-											<img src="/static/images/icons/icon-product-one.svg" class="icon-dispo">
+											<img :src="aranDis.icon" class="icon-dispo">
 										</v-flex>
 										<v-flex>
-											<span class="text-dispo">Fresco</span>	
-										</v-flex>
-									</v-layout>
-								</li>
-								<li class="content-disp">
-									<v-layout column align-center>
-										<v-flex>
-											<img src="/static/images/icons/icon-product-two-es.svg" class="icon-dispo">
-										</v-flex>
-										<v-flex>
-											<span class="text-dispo">Congelados</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li class="content-disp">
-									<v-layout column align-center>
-										<v-flex>
-											<img src="/static/images/icons/icon-three-es.svg" class="icon-dispo">
-										</v-flex>
-										<v-flex>
-											<span class="text-dispo">Conservas</span>
+											<span class="text-dispo">{{aranDis.name}}</span>	
 										</v-flex>
 									</v-layout>
 								</li>
 							</ul>
 						</div>
 					</v-flex>
-					<v-flex>
+					<v-flex class="relative">
+						<button class="btn-temporate width-arandanos">{{$t('titleTemporate')}} <br> {{$t('rangeTemporateArandanos')}}</button>
 						<img src="/static/images/section/arandanos-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop">
 						<img src="/static/images/section/img-arandanos.png" class="w-100 br-mobile" alt="imagen-esparrago">
 					</v-flex>
@@ -555,7 +332,7 @@
 						<span class="title-product-green">KENT</span>
 					</v-flex>
 					<div>
-						<p class="title-list">Presentación</p>
+						<p class="title-list">{{$t('titlePres')}}</p>
 						<ul class="list-dispo">
 							<li>
 								<v-layout column align-center>
@@ -563,7 +340,7 @@
 										<img src="/static/images/icons/icon-present-three-es.svg" alt="" class="icono-three">
 									</v-flex>
 									<v-flex class="title-preset">
-										Marca Privada
+										{{$t('titlePrivate')}}
 									</v-flex>
 								</v-layout>
 							</li>
@@ -573,69 +350,39 @@
 				<v-layout row mt-2 class="column-reverse-mobile">
 					<v-flex>
 						<div>
-							<ul class="list-none">
-								<p class="title-list br-desktop">Propiedades</p>
-								<li class="mb-product">
+							<ul class="list-none pd-mango">
+								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
+								<li class="mb-product" v-for="(man, index) in $t('listPropertiesMang')" :key="index">
 									<v-layout row>
-										<v-flex>
+										<v-flex xs1>
 											<img src="/static/images/icons/check-mark.svg">
 										</v-flex>
 										<v-flex class="item-description ml-2">
-											Fruta rica en vitamina
-											<span class="bold-description">A, C Y E</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li class="mb-product">
-									<v-layout row>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Aporta
-											<span class="bold-description">magnecio y potasio</span>
-										</v-flex>
-									</v-layout>
-								</li>
-								<li>
-									<v-layout row>
-										<v-flex>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											Favorece a la <span class="bold-description">asimilación de nutrientes</span>, con los flavonoides como principales antioxidantes presentes 
+											{{man.name}}
+											<span class="bold-description">{{man.bold}}</span>
 										</v-flex>
 									</v-layout>
 								</li>
 							</ul>
 						</div>
 						<div>
-							<p class="title-list mt-disp italic">Disponible</p>
+							<p class="title-list mt-disp italic">{{$t('titleDis')}}</p>
 							<ul class="list-dispo">
-								<li>
+								<li class="content-disp" v-for="(man, index) in $t('avaibleMango')" :key="index">
 									<v-layout column align-center>
 										<v-flex>
-											<img src="/static/images/icons/icon-product-one.svg" class="icon-dispo">
+											<img :src="man.icon" class="icon-dispo">
 										</v-flex>
 										<v-flex>
-											<span class="text-dispo">Fresco</span>	
-										</v-flex>
-									</v-layout>
-								</li>
-								<li class="content-disp">
-									<v-layout column align-center>
-										<v-flex>
-											<img src="/static/images/icons/icon-product-two-es.svg" class="icon-dispo">
-										</v-flex>
-										<v-flex>
-											<span class="text-dispo">Congelados</span>
+											<span class="text-dispo">{{man.name}}</span>	
 										</v-flex>
 									</v-layout>
 								</li>
 							</ul>
 						</div>
 					</v-flex>
-					<v-flex>
+					<v-flex class="relative">
+						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeMango')}}</button>
 						<img src="/static/images/section/mango-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop">
 						<img src="/static/images/section/img-mango-kent.png" class="w-100 br-mobile" alt="imagen-esparrago">
 					</v-flex>
@@ -767,11 +514,20 @@ function data() {
 				id: 6,
 				titleBlack: 'MANGO',
 				titleGreen: 'KENT',
-				listProperties: [
+				listPropertiesMang: [
 					{
 						id: 1,
 						name: 'Fruta rica en vitamina',
 						bold: 'A, C Y E',
+					},
+					{
+						id: 2,
+						name: 'Aporta',
+						bold: 'magnecio y potasio',
+					},
+					{
+						id: 3,
+						name: 'Favorece a la asimilación de nutrientes, con los flavonoides como principales antioxidantes presentes',
 					},
 				],
 			},
@@ -812,7 +568,6 @@ export default {
 	font-weight: 500;
 	height: 44px;
 	margin-left: 21px;
-	padding: 0 30px;
 
 	&.active {
 		background-color: #66cc33;
@@ -831,7 +586,6 @@ export default {
 .content-buttons {
 	background-color: #fafafa;
 	border-radius: 31.5px;
-	margin-bottom: 39px;
 	padding: 9px 0 9px 11px;
 	overflow: auto;
 	overflow-y: hidden;
@@ -876,7 +630,7 @@ export default {
 	font-size: 12px;
 	line-height: 17px;
 
-	@media (max-width: 936px) {
+	@media (min-width: 936px) {
 		font-size: 15px;
 		max-width: 236px;
 	}
@@ -890,6 +644,7 @@ export default {
 	color: #000000;
 	font-size: 14px;
 	font-weight: bold;
+	margin-top: 12px;
 	line-height: 27px;
 	
 	@media (min-width: 936px) {
@@ -932,9 +687,11 @@ export default {
 }
 
 .content-product {
+	margin-top: 40px;
 	padding: 0 30px;
 
 	@media (min-width: 936px) {
+		margin-top: 70px;
 		padding: 0 10%;
 	}
 }
@@ -944,6 +701,7 @@ export default {
 	flex-direction: column;
 
 	@media (min-width: 936px) {
+		align-items: flex-end;
 		flex-direction: row;
 		justify-content: space-between;
 	}
@@ -972,10 +730,10 @@ export default {
 }
 
 .mt-disp {
-	margin-top: 16px;
+	margin-top: 35px;
 
 	@media (min-width: 936px) {
-		margin-top: 30px;
+		margin-top: 38px;
 	}
 }
 
@@ -1001,6 +759,87 @@ export default {
 .icono-three {
 	@media (max-width: 936px) {
 		height: 33px;
+	}
+}
+
+.cont-title-desktop {
+	@media (min-width: 936px) {
+		padding-top: 50px;
+	}
+}
+
+.btn-temporate {
+	background-color: #000000;
+	border-radius: 26px;
+	bottom: 0;
+	color: white;
+	font-size: 12px;
+	font-weight: 600;
+	height: 42px;
+	line-height: 13px;
+	position: absolute;
+	right: 0px;
+	text-align: center;
+	width: 142px;
+
+	@media (min-width: 936px) {
+		bottom: 56px;
+		font-size: 16px;
+		height: 55px;
+		line-height: 17px;
+		padding: 0 10px;
+		right: 82px;
+		width: 192px;
+	}
+}
+
+.width-arandanos {
+	@media (min-wdith: 936px) {
+		width: 325px;
+	}
+}
+
+.img-mobile-pim {
+	@media (max-width: 936px) {
+		height: 170px;
+		width: 88% !important;
+	}
+}
+
+.mobile-image-maracuya {
+	@media (max-width: 936px) {
+		height: 180px;
+		width: 86%;
+	}
+}
+
+.pt-one {
+	@media (min-width: 936px) {
+		padding-top: 46px;
+	}
+}
+
+.pt-two {
+	@media (min-wdith: 936px) {
+		padding-top: 23px;
+	}
+}
+
+.pt-three {
+	@media (min-width: 936px) {
+		padding-top: 70px;
+	}
+}
+
+.content-arandanos-desktop {
+	@media (min-width: 936px) {
+		margin-top: 90px;
+	}
+}
+
+.pd-mango {
+	@media (min-width: 936px) {
+		padding-top: 65px;
 	}
 }
 </style>

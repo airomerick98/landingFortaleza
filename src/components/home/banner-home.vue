@@ -13,13 +13,29 @@
 				</div>
 			</div>
 			<slider
+				class="br-mobile"
 				:control-btn="false"
 				height="100vh"
 				animation="fade"
-				:speed="5000"
+				:speed="6000"
 				width="100%"
 			>
-				<slider-item v-for="(item, index) in $t('banners')" :key="index">
+				<slider-item  v-for="(item, index) in $t('banners')" :key="index">
+					<div class="banner-slide" :style="`background-image: url(${item.url})`">
+						<v-flex class="text-bold-banner">{{item.textBold}}</v-flex>
+						<v-flex class="subtitle-banner">{{item.text}}</v-flex>
+					</div>
+				</slider-item>
+			</slider>
+			<slider
+				class="br-desktop"
+				:control-btn="false"
+				height="100vh"
+				animation="fade"
+				:speed="6000"
+				width="100%"
+			>
+				<slider-item  v-for="(item, index) in $t('bannersMobile')" :key="index">
 					<div class="banner-slide" :style="`background-image: url(${item.url})`">
 						<v-flex class="text-bold-banner">{{item.textBold}}</v-flex>
 						<v-flex class="subtitle-banner">{{item.text}}</v-flex>

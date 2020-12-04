@@ -28,6 +28,32 @@
 				</div>
 			</div>
 			<div class="br-desktop app-header-container-button">
+				<v-flex>
+						<v-select
+						class="input-component"
+						v-model="country"
+						item-text="value"
+						item-value="name"
+						:items="languages"
+						hide-details
+						single-line
+					>
+						<template slot="selection" slot-scope="data">
+							<button type="button" @click="setLocale(data.item.lan)">
+								<flag :iso="data.item.icon"></flag>
+								<span>{{data.item.name}}</span>
+							</button>
+						</template>
+						<template slot="item" slot-scope="data">
+							<div>
+								<button type="button" @click="setLocale(data.item.lan)">
+									<flag :iso="data.item.icon"></flag>
+									<span class="ml-2">{{data.item.name}}</span>
+								</button>
+							</div>
+						</template>
+					</v-select>
+				</v-flex>
 				<button type="button" @click="toogleMenu" class="app-header-button">
 				<img
 					v-if="open"
@@ -54,7 +80,7 @@
 				</v-flex>
 				<v-flex xs2>
 					<v-select
-						class="input-component br-mobile "
+						class="input-component br-mobile"
 						v-model="country"
 						item-text="value"
 						item-value="name"
@@ -70,7 +96,7 @@
 						</template>
 						<template slot="item" slot-scope="data">
 							<div>
-								<button button @click="setLocale(data.item.lan)">
+								<button type="button" @click="setLocale(data.item.lan)">
 									<flag :iso="data.item.icon"></flag>
 									<span class="ml-2">{{data.item.name}}</span>
 								</button>
@@ -347,6 +373,7 @@ export default {
 
 	@media (max-width: 936px) {
 		.app-header-container-button {
+			display: flex;
 			width: 50%;
 			text-align: right;
 		}
@@ -359,7 +386,7 @@ export default {
 		color: #41aa36;
 		font-size: 14px;
 		font-weight: 600;
-		height: 40px;
+		height: 30px;
 		padding: 0 0 0 15px;
 		width: 100%;
 
@@ -368,8 +395,7 @@ export default {
 		}
 
 		@media (max-width: 936px) {
-			border-radius: 3px;
-			height: 50px;
+			width: 70%;
 		}
 	}
 

@@ -61,6 +61,26 @@ const i18n = new VueI18n({
 					url: '/static/images/banners/image-banner-three.jpg',
 				},
 			],
+			bannersMobile: [
+				{
+					id: 1,
+					url: '/static/images/banners/banner-mobile-one.jpg',
+					textBold: 'DEL CAMPO',
+					text: 'A TU MESA',
+				},
+				{
+					id: 2,
+					url: '/static/images/banners/banner-mobile-two.jpg',
+					textBold: 'COMERCIALIZAMOS',
+					text: 'LAS MEJORES FRUTAS',
+				},
+				{
+					id: 3,
+					textBold: 'COMERCIALIZAMOS',
+					text: 'LOS MEJORES ESPARRAGOS',
+					url: '/static/images/banners/banner-mobile-three.jpg',
+				},
+			],
 			titleContactUs: 'NOSOTROS',
 			titleAboutUs: 'QUIENES SOMOS',
 			descriptionAboutUs: 'Somos una Compañía Agroindustrial Peruana Sostenible, dedicada al cultivo, procesamiento y exportación de productos de alta calidad, dirigidos hacia los mercados y consumidores más exigentes del mundo.',
@@ -209,9 +229,112 @@ const i18n = new VueI18n({
 				},
 			],
 			titleProduts: 'PRODUCTOS',
+			titleProperties: 'Propiedades',
+			listProperties: [
+				{
+					id: 1,
+					name: 'Tiene una gran cantidad de vitaminas:',
+					bold: 'A, B1, B2, B6, C Y E.',
+				},
+				{
+					id: 2,
+					name: 'Tiene minerales como:',
+					bold: 'magnesio, fósforo, calcio y potasio.',
+				},
+				{
+					id: 3,
+					name: 'Alta cantidad de',
+					bold: 'antioxidantes.',
+				},
+			],
+			listPropertiesRed: [
+				{
+					id: 1,
+					name: 'Por su alto contenido de potasio, el morrón en un',
+					bold: 'excelente diurético',
+				},
+				{
+					id: 2,
+					name: 'Ayuda a',
+					bold: 'bajar de peso',
+				},
+				{
+					id: 3,
+					name: 'Tiene un bajo aporte de calorías:',
+					bold: 'sólo 20 calorías cada 100 gramos',
+				},
+			],
+			listPropertiesFruit: [
+				{
+					id: 1,
+					name: 'Ayuda a',
+					bold: 'reducir la presión arterial.',
+				},
+				{
+					id: 2,
+					bold: 'Rica en vitaminas A y C antioxidantes,',
+					name: 'alto contenido de hierro y flavonoides.',
+				},
+				{
+					id: 3,
+					name: 'Estimulante natural y suplemento dietético práctico,',
+					bold: 'aumenta el metabolismo.',
+				},
+			],
+			listPropertiesMang: [
+				{
+					id: 1,
+					name: 'Fruta rica en vitamina',
+					bold: 'A, C Y E',
+				},
+				{
+					id: 2,
+					name: 'Aporta',
+					bold: 'magnecio y potasio',
+				},
+				{
+					id: 3,
+					name: 'Favorece a la asimilación de nutrientes, con los flavonoides como principales antioxidantes presentes',
+				},
+			],
+			avaibleMango: [
+				{
+					id: 1,
+					icon: '/static/images/icons/icon-product-one.svg',
+					name: 'Fresco',
+				},
+				{
+					id: 2,
+					icon: '/static/images/icons/icon-product-two-es.svg',
+					name: 'Congelados',
+				},
+			],
+			titlePrivate: 'Marca Privada',
 			titleEs: 'ESPÁRRAGO',
 			titleEsGreen: 'VERDE',
+			titleEsWhite: 'BLANCO',
 			titlePres: 'Presentación:',
+			titleBlackBell: 'PIMIENTO',
+			titleGreenBell: 'MORRON',
+			titleGreenFruit: 'MARACUYÁ',
+			titleGreenAran: 'ARÁNDANOS',
+			listPropertiesAran: [
+				{
+					id: 1,
+					name: 'Favorece a la',
+					bold: 'familia de los berries.',
+				},
+				{
+					id: 2,
+					name: 'Muy bajo en calorías, gran contenido de fibra,',
+					bold: 'vitamina C y K.',
+				},
+				{
+					id: 3,
+					name: 'Tienen la capacidad antioxidante, con los flavonoides como principales antioxidantes presentes',
+				},
+			],
+			titleConserve: 'Conservas',
 			listPresents: [
 				{
 					id: 1,
@@ -250,27 +373,33 @@ const i18n = new VueI18n({
 			btnsProducts: [
 				{
 					id: 1,
-					name: 'ESPARRAGOS VERDES',
+					name: 'ESPÁRRAGOS VERDES',
+					width: '221px',
 				},
 				{
 					id: 2,
-					name: 'ESPARRAGOS BLANCOS',
+					name: 'ESPÁRRAGOS BLANCOS',
+					width: '195px',
 				},
 				{
 					id: 3,
-					name: 'PIMIENTOS MARRONES',
+					name: 'PIMIENTOS MORRONES',
+					width: '195px',
 				},
 				{
 					id: 4,
 					name: 'MARACUYÁ',
+					width: '146px',
 				},
 				{
 					id: 5,
 					name: 'ARÁNDANOS',
+					width: '146px',
 				},
 				{
 					id: 6,
 					name: 'MANGO',
+					width: '146px',
 				},
 			],
 			titleMarket: 'MERCADOS',
@@ -284,7 +413,13 @@ const i18n = new VueI18n({
 			btnTitleContact: 'Enviar',
 			titleFind: 'Encuéntranos',
 			titleInformation: 'Información',
-			imageMobileMarket: '/static/images/banners/section-market-mobile.png',
+			imageMobileMarket: '/static/images/banners/image-market-desktop.png',
+			titleTemporate: 'Temporada',
+			rangeTemporate: 'Enero - Diciembre',
+			rangeTemporateRed: 'Enero - Agosto',
+			rangeTemporateMar: 'Noviembre - Abril',
+			rangeTemporateArandanos: 'Ene-May/Jul -Dic',
+			rangeMango: 'Noviembre - Abril',
 			linksFooter: [
 				{
 					id: 1,
@@ -521,8 +656,112 @@ const i18n = new VueI18n({
 				},
 			],
 			titleProduts: 'PRODUCTS',
+			titleProperties: 'Properties',
+			listProperties: [
+				{
+					id: 1,
+					name: 'Has a large amount of vitamins:',
+					bold: 'A, B1, B2, B6, C and E.',
+				},
+				{
+					id: 2,
+					name: 'Has minerals such as',
+					bold: 'magnesium, phosphorus, calcium, and potassium.',
+				},
+				{
+					id: 3,
+					name: 'High amount of',
+					bold: 'antioxidants',
+				},
+			],
+			listPropertiesRed: [
+				{
+					id: 1,
+					name: 'Due to its high potassium content, it is an',
+					bold: 'excellent diuretic',
+				},
+				{
+					id: 2,
+					name: 'It helps you',
+					bold: 'lose weight',
+				},
+				{
+					id: 3,
+					name: 'They have a low caloric intake,',
+					bold: 'only 20 calories per 100 grams.',
+				},
+			],
+			listPropertiesFruit: [
+				{
+					id: 1,
+					name: 'Helps',
+					bold: 'reduce blood pressure.',
+				},
+				{
+					id: 2,
+					bold: 'Rich in vitamins a, c and antioxidants',
+					name: 'high content of iron and flavonoids',
+				},
+				{
+					id: 3,
+					name: 'Natural stimulant and practical dietary supplement,',
+					bold: 'increases metabolism.',
+				},
+			],
+			listPropertiesMang: [
+				{
+					id: 1,
+					name: 'Fruit rich in vitamin',
+					bold: 'A, C and E',
+				},
+				{
+					id: 2,
+					name: 'Provides',
+					bold: 'magnesium and potassium',
+				},
+				{
+					id: 3,
+					name: 'Supports the',
+					bold: 'assimilation of nutrients',
+				},
+			],
+			avaibleMango: [
+				{
+					id: 1,
+					icon: '/static/images/icons/icon-product-one.svg',
+					name: 'Fresh',
+				},
+				{
+					id: 2,
+					icon: '/static/images/icons/icon-product-two-es.svg',
+					name: 'Frozen',
+				},
+			],
+			titlePrivate: 'Private Label',
 			titleEs: 'ASPARAGUS',
+			titleEsWhite: 'WHITE',
 			titleEsGreen: 'GREEN',
+			titleBlackBell: 'RED BELL',
+			titleGreenBell: 'PEPPER',
+			titleGreenFruit: 'PASSION FRUIT',
+			titleGreenAran: 'BLUEBERRY ',
+			listPropertiesAran: [
+				{
+					id: 1,
+					name: 'Belongs to the',
+					bold: 'berries family',
+				},
+				{
+					id: 2,
+					name: 'Very low in calories,',
+					bold: 'high in fiber, vitamin c and k',
+				},
+				{
+					id: 3,
+					name: 'They have antioxidant capacity, with flavonoids as the main antioxidants present.',
+				},
+			],
+			titleConserve: 'Canned',
 			titlePres: 'Presentation:',
 			listPresents: [
 				{
@@ -629,7 +868,33 @@ const i18n = new VueI18n({
 				},
 			],
 			titleContactFooter: 'Contac Us',
-			imageMobileMarket: '/static/images/banners/image-market-mobile-es.png',
+			imageMobileMarket: '/static/images/banners/market-mobile-en.png',
+			titleTemporate: 'Season',
+			rangeTemporate: 'Junary to  December',
+			rangeTemporateRed: 'Junary to  August',
+			rangeTemporateMar: 'November to  April',
+			rangeTemporateArandanos: 'January to May/  July to December',
+			rangeMango: 'November to April',
+			bannersMobile: [
+				{
+					id: 1,
+					url: '/static/images/banners/banner-mobile-one.jpg',
+					textBold: 'FROM FIELD',
+					text: 'TO YOUR TABLE',
+				},
+				{
+					id: 2,
+					url: '/static/images/banners/banner-mobile-two.jpg',
+					textBold: 'WE SELL',
+					text: 'TE PREMIUM FRUITS',
+				},
+				{
+					id: 3,
+					textBold: 'WE SELL',
+					text: 'THE BEST ASPARAGUS',
+					url: '/static/images/banners/banner-mobile-three.jpg',
+				},
+			],
 		},
 	},
 });
