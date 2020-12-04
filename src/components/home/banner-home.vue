@@ -27,7 +27,7 @@
 					</div>
 				</slider-item>
 			</slider>
-			<slider
+			<!-- <slider
 				class="br-desktop"
 				:control-btn="false"
 				height="100vh"
@@ -41,7 +41,7 @@
 						<v-flex class="subtitle-banner">{{item.text}}</v-flex>
 					</div>
 				</slider-item>
-			</slider>
+			</slider> -->
 		</div>
 </template>
 
