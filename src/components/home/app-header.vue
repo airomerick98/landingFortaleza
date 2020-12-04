@@ -29,7 +29,7 @@
 			</div>
 			<div class="br-desktop app-header-container-button">
 				<v-flex>
-						<v-select
+					<v-select
 						class="input-component"
 						v-model="country"
 						item-text="value"
@@ -67,7 +67,7 @@
 					height="15">
 				</button>
 			</div>
-			<v-flex xs9>
+			<v-flex xs9 class="br-mobile">
 				<v-layout row align-center>
 					<v-flex>
 						<v-layout row align-center class="menu-header">
@@ -78,9 +78,9 @@
 						</v-flex>
 					</v-layout>
 				</v-flex>
-				<v-flex xs2>
+				<v-flex xs2 class="br-mobile">
 					<v-select
-						class="input-component br-mobile"
+						class="input-component"
 						v-model="country"
 						item-text="value"
 						item-value="name"
