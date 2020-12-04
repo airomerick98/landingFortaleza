@@ -1404,6 +1404,14 @@ button:disabled {
 	}
 }
 
+.banner {
+	.slider {
+		@media (max-wdith: 936px) {
+			display: none;
+		}
+	}
+}
+
 .slider {
 	height: 613px !important;
 }

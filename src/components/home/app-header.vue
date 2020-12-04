@@ -30,7 +30,7 @@
 			<div class="br-desktop app-header-container-button">
 				<v-flex>
 					<v-select
-						class="input-component"
+						class="input-component width-mobile"
 						v-model="country"
 						item-text="value"
 						item-value="name"
@@ -393,10 +393,6 @@ export default {
 		&:focus {
 			outline: 0px;
 		}
-
-		@media (max-width: 936px) {
-			width: 70%;
-		}
 	}
 
 	.width-desktop {
@@ -410,5 +406,11 @@ export default {
 		left: 50%;
 		position: absolute;
 		transform: translateX(-50%);
+	}
+
+	.width-mobile {
+		@media (max-width: 936px) {
+			width: 85%;
+		}
 	}
 </style>
