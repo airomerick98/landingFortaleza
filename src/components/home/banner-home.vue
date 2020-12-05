@@ -20,7 +20,7 @@
 				width="100%"
 			>
 				<slider-item  v-for="(item, index) in $t('banners')" :key="index">
-					<div class="banner-slide br-mobile" :style="`background-image: url(${item.url})`">
+					<div class="banner-slide" :style="`background-image: url(${item.url})`">
 						<v-flex class="text-bold-banner">{{item.textBold}}</v-flex>
 						<v-flex class="subtitle-banner">{{item.text}}</v-flex>
 					</div>
