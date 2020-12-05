@@ -13,7 +13,6 @@
 				</div>
 			</div>
 			<slider
-				class="br-mobile"
 				:control-btn="false"
 				height="100vh"
 				animation="fade"
