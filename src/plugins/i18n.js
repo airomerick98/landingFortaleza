@@ -403,6 +403,7 @@ const i18n = new VueI18n({
 			rangeTemporateMar: 'Noviembre - Abril',
 			rangeTemporateArandanos: 'Ene-May/Jul -Dic',
 			rangeMango: 'Noviembre - Abril',
+			titleOffice: 'Oficina',
 			linksFooter: [
 				{
 					id: 1,
@@ -481,7 +482,7 @@ const i18n = new VueI18n({
 				},
 				{
 					id: 2,
-					url: '/static/images/banners/image-banner-two.png',
+					url: '/static/images/banners/image-banner-two.jpg',
 					urlMobile: '/static/images/banners/banner-mobile-two.jpg',
 					textBold: 'WE SELL',
 					text: 'THE PREMIUM FRUITS',
@@ -490,7 +491,7 @@ const i18n = new VueI18n({
 					id: 3,
 					textBold: 'WE SELL',
 					text: 'THE BEST ASPARAGUS',
-					url: '/static/images/banners/image-banner-three.png',
+					url: '/static/images/banners/image-banner-three.jpg',
 					urlMobile: '/static/images/banners/banner-mobile-three.jpg',
 				},
 			],
@@ -861,6 +862,7 @@ const i18n = new VueI18n({
 			rangeTemporateMar: 'November to  April',
 			rangeTemporateArandanos: 'January to May/  July to December',
 			rangeMango: 'November to April',
+			titleOffice: 'Office',
 		},
 	},
 });

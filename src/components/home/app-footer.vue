@@ -29,7 +29,7 @@
 							<img src="/static/images/icons/icon-office.svg" alt="icono-direccion">
 						</v-flex>
 						<v-flex class="item-list ml-3">
-							Oficina: Mza. C Lote. 09 Int. 03 piso Dpto 03 urb Los Cedros de Santa Clara, Ate - Lima.
+							{{$t('titleOffice')}}: Mza. C Lote. 09 Int. 03 piso Dpto 03 urb Los Cedros de Santa Clara, Ate - Lima.
 						</v-flex>
 					</v-layout>
 					<v-layout row>
@@ -93,7 +93,7 @@ export default {
 
 	@media (min-width: 936px) {
 		background-image: url('/static/images/banners/banner-footer.jpg');
-		height: 470px;
+		height: 435px;
 	}
 }
 
