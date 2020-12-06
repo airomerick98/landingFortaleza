@@ -56,8 +56,8 @@ export default {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 580px;
-	padding: 139px 30px 120px 30px;
+	height: 620px;
+	padding: 130px 30px 120px 30px;
 	width: 100%;
 
 	@media (min-width: 936px) {

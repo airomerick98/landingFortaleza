@@ -317,6 +317,7 @@ export default {
 
 .opacity-image {
 	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
 	display: none;
 	position: absolute;
 	top: 0;

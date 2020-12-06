@@ -20,7 +20,11 @@
 				width="100%"
 			>
 				<slider-item  v-for="(item, index) in $t('banners')" :key="index">
-					<div class="banner-slide" :style="`background-image: url(${item.url})`">
+					<div class="banner-slide br-mobile" :style="`background-image: url(${item.url})`">
+						<v-flex class="text-bold-banner">{{item.textBold}}</v-flex>
+						<v-flex class="subtitle-banner">{{item.text}}</v-flex>
+					</div>
+					<div class="banner-slide br-desktop" :style="`background-image: url(${item.urlMobile})`">
 						<v-flex class="text-bold-banner">{{item.textBold}}</v-flex>
 						<v-flex class="subtitle-banner">{{item.text}}</v-flex>
 					</div>
@@ -87,7 +91,7 @@ export default {
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 100vh;
+		height: 600px;
 		padding: 138px 16px 0 0;
 
 		@media (min-width: 936px) {

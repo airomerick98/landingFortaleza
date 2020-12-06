@@ -163,6 +163,7 @@ export default {
 .title-tab-us {
 	font-size: 20px;
 	color: #878787;
+	margin-bottom: 25px;
 	text-align: center;
 
 	@media (min-width: 936px) {
@@ -237,6 +238,8 @@ export default {
 }
 
 .pd-two-us {
-	padding-top: 145px !important;
+	@media (min-width: 936px) {
+		padding-top: 145px !important;	
+	}
 }
 </style>

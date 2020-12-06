@@ -1348,6 +1348,12 @@ button:disabled {
 }
 
 .banner {
+	.slider-indicators {
+		@media (max-width: 936px) {
+			bottom: 70px !important;
+		}
+	}
+
 	.slider-indicators-center {
 		@media (max-width: 936px) {
 			border-radius: 13.8px !important;
@@ -1434,6 +1440,11 @@ button:disabled {
     top: 42px !important;
 	left: -63px !important;
 	min-width: 120px !important;
+
+	@media (max-width: 936px) {
+		top: 34px !important;
+		left: -84px !important;
+	}
 }
 
 .list__tile--link {

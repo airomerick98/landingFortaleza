@@ -45,12 +45,14 @@ const i18n = new VueI18n({
 				{
 					id: 1,
 					url: '/static/images/banners/image-banner-one.jpg',
+					urlMobile: '/static/images/banners/banner-mobile-one.jpg',
 					textBold: 'DEL CAMPO',
 					text: 'A TU MESA',
 				},
 				{
 					id: 2,
 					url: '/static/images/banners/image-banner-two.jpg',
+					urlMobile: '/static/images/banners/banner-mobile-two.jpg',
 					textBold: 'COMERCIALIZAMOS',
 					text: 'LAS MEJORES FRUTAS',
 				},
@@ -59,26 +61,7 @@ const i18n = new VueI18n({
 					textBold: 'COMERCIALIZAMOS',
 					text: 'LOS MEJORES ESPARRAGOS',
 					url: '/static/images/banners/image-banner-three.jpg',
-				},
-			],
-			bannersMobile: [
-				{
-					id: 1,
-					url: '/static/images/banners/banner-mobile-one.jpg',
-					textBold: 'DEL CAMPO',
-					text: 'A TU MESA',
-				},
-				{
-					id: 2,
-					url: '/static/images/banners/banner-mobile-two.jpg',
-					textBold: 'COMERCIALIZAMOS',
-					text: 'LAS MEJORES FRUTAS',
-				},
-				{
-					id: 3,
-					textBold: 'COMERCIALIZAMOS',
-					text: 'LOS MEJORES ESPARRAGOS',
-					url: '/static/images/banners/banner-mobile-three.jpg',
+					urlMobile: '/static/images/banners/banner-mobile-three.jpg',
 				},
 			],
 			titleContactUs: 'NOSOTROS',
@@ -272,8 +255,8 @@ const i18n = new VueI18n({
 				},
 				{
 					id: 2,
-					bold: 'Rica en vitaminas A y C antioxidantes,',
-					name: 'alto contenido de hierro y flavonoides.',
+					name: 'Rica en vitaminas A y C antioxidantes,',
+					bold: 'alto contenido de hierro y flavonoides.',
 				},
 				{
 					id: 3,
@@ -492,12 +475,14 @@ const i18n = new VueI18n({
 				{
 					id: 1,
 					url: '/static/images/banners/image-banner-one.png',
+					urlMobile: '/static/images/banners/banner-mobile-one.jpg',
 					textBold: 'FROM FIELD',
 					text: 'TO YOUR TABLE',
 				},
 				{
 					id: 2,
 					url: '/static/images/banners/image-banner-two.png',
+					urlMobile: '/static/images/banners/banner-mobile-two.jpg',
 					textBold: 'WE SELL',
 					text: 'THE PREMIUM FRUITS',
 				},
@@ -506,6 +491,7 @@ const i18n = new VueI18n({
 					textBold: 'WE SELL',
 					text: 'THE BEST ASPARAGUS',
 					url: '/static/images/banners/image-banner-three.png',
+					urlMobile: '/static/images/banners/banner-mobile-three.jpg',
 				},
 			],
 			titleContactUs: 'WHO WE ARE',
@@ -875,26 +861,6 @@ const i18n = new VueI18n({
 			rangeTemporateMar: 'November to  April',
 			rangeTemporateArandanos: 'January to May/  July to December',
 			rangeMango: 'November to April',
-			bannersMobile: [
-				{
-					id: 1,
-					url: '/static/images/banners/banner-mobile-one.jpg',
-					textBold: 'FROM FIELD',
-					text: 'TO YOUR TABLE',
-				},
-				{
-					id: 2,
-					url: '/static/images/banners/banner-mobile-two.jpg',
-					textBold: 'WE SELL',
-					text: 'TE PREMIUM FRUITS',
-				},
-				{
-					id: 3,
-					textBold: 'WE SELL',
-					text: 'THE BEST ASPARAGUS',
-					url: '/static/images/banners/banner-mobile-three.jpg',
-				},
-			],
 		},
 	},
 });

@@ -44,7 +44,7 @@
 										<v-flex xs1>
 											<img src="/static/images/icons/check-mark.svg">
 										</v-flex>
-										<v-flex class="item-description ml-2">
+										<v-flex class="item-description">
 											{{pro.name}}
 											<span class="bold-description">{{pro.bold}}</span>
 										</v-flex>
@@ -70,7 +70,7 @@
 					</v-flex>
 					<v-flex class="relative">
 						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeTemporate')}}</button>
-						<img src="/static/images/section/esparrago-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop">
+						<img src="/static/images/section/esparrago-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop image-esparrago">
 						<img src="/static/images/section/image-product-one.png" class="w-100 br-mobile" alt="imagen-esparrago">
 					</v-flex>
 				</v-layout>
@@ -195,7 +195,7 @@
 						</div>
 					</v-flex>
 					<v-flex class="relative">
-						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeTemporateRed')}}</button>
+						<button class="btn-temporate btn-temporate-pim">{{$t('titleTemporate')}} <br> {{$t('rangeTemporateRed')}}</button>
 						<img src="/static/images/section/pimiento-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop img-mobile-pim">
 						<img src="/static/images/section/img-pimiento-morrin.png" class="w-100 br-mobile" alt="imagen-esparrago">
 					</v-flex>
@@ -287,7 +287,7 @@
 				<v-layout row class="column-reverse-mobile content-arandanos-desktop">
 					<v-flex>
 						<div>
-							<ul class="list-none">
+							<ul class="list-none mt-aran-mobile">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
 								<li class="mb-product" v-for="(aran, index) in $t('listPropertiesAran')" :key="index">
 									<v-layout row>
@@ -319,9 +319,9 @@
 						</div>
 					</v-flex>
 					<v-flex class="relative">
-						<button class="btn-temporate width-arandanos">{{$t('titleTemporate')}} <br> {{$t('rangeTemporateArandanos')}}</button>
-						<img src="/static/images/section/arandanos-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop">
-						<img src="/static/images/section/img-arandanos.png" class="w-100 br-mobile" alt="imagen-esparrago">
+						<button class="btn-temporate width-arandanos bottom-aran">{{$t('titleTemporate')}} <br> {{$t('rangeTemporateArandanos')}}</button>
+						<img src="/static/images/section/arandanos-mobile.png" alt="imagen-esparrago" class="br-desktop image-arandanos-mobile">
+						<img src="/static/images/section/img-arandanos.png" class="w-100 br-mobile" alt="imagen-arandanos">
 					</v-flex>
 				</v-layout>
 			</div>
@@ -383,7 +383,7 @@
 					</v-flex>
 					<v-flex class="relative">
 						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeMango')}}</button>
-						<img src="/static/images/section/mango-mobile.png" alt="imagen-esparrago" class="w-100 br-desktop">
+						<img src="/static/images/section/mango-mobile.png" alt="imagen-esparrago" class="br-desktop image-mango">
 						<img src="/static/images/section/img-mango-kent.png" class="w-100 br-mobile" alt="imagen-esparrago">
 					</v-flex>
 				</v-layout>
@@ -565,7 +565,7 @@ export default {
 	border-radius: 31.5px;
 	color: #878787;
 	font-size: 14px;
-	font-weight: 500;
+	font-weight: 600;
 	height: 44px;
 	margin-left: 21px;
 
@@ -629,6 +629,7 @@ export default {
 	color: #000000;
 	font-size: 12px;
 	line-height: 17px;
+	max-width: 235px;
 
 	@media (min-width: 936px) {
 		font-size: 15px;
@@ -644,11 +645,12 @@ export default {
 	color: #000000;
 	font-size: 14px;
 	font-weight: bold;
-	margin-top: 12px;
 	line-height: 27px;
+	margin-bottom: 5px;
 	
 	@media (min-width: 936px) {
 		font-size: 16px;
+		margin-top: 12px;
 	}
 }
 
@@ -793,7 +795,7 @@ export default {
 	}
 }
 
-.width-arandanos {
+.width-arandanos {	
 	@media (min-wdith: 936px) {
 		width: 325px;
 	}
@@ -801,15 +803,19 @@ export default {
 
 .img-mobile-pim {
 	@media (max-width: 936px) {
-		height: 170px;
-		width: 88% !important;
+		bottom: 29px;
+		left: 51px;
+		position: relative;
+		width: 80%;	
 	}
 }
 
 .mobile-image-maracuya {
 	@media (max-width: 936px) {
-		height: 180px;
-		width: 86%;
+		bottom: 20px;
+		left: 58px;
+		position: relative;
+		width: 70%;
 	}
 }
 
@@ -840,6 +846,45 @@ export default {
 .pd-mango {
 	@media (min-width: 936px) {
 		padding-top: 65px;
+	}
+}
+
+.image-esparrago {
+	@media (max-width: 936px) {
+		bottom: 30px;
+		position: relative;
+	}
+}
+
+.btn-temporate-pim {
+	@media (max-width: 936px) {
+		bottom: -16px;
+	}
+}
+
+.image-arandanos-mobile {
+	@media (max-width: 936px) {
+		left: 20%;
+		position: relative;
+	}
+}
+
+.mt-aran-mobile {
+	@media (max-width: 936px) {
+		margin-top: 45px;
+	}
+}
+
+.bottom-aran {
+	@media (max-width: 936px) {
+		bottom: -45px;
+	}
+}
+
+.image-mango {
+	@media (max-width: 936px) {
+		bottom: 30px;
+		position: relative;
 	}
 }
 </style>
