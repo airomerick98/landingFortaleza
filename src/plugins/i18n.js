@@ -139,7 +139,7 @@ const i18n = new VueI18n({
 				{
 					id: 1,
 					name: 'SISTEMA INTEGRADO DE GESTIÓN',
-					width: 251,
+					width: 278,
 				},
 				{
 					id: 2,
@@ -158,7 +158,7 @@ const i18n = new VueI18n({
 				},
 			],
 			titleQuality: 'CALIDAD',
-			descriptionQuality: 'We are committed to cultivate, process and export quality products, certified under international standards that guarantee our customers the satisfaction of the final consumer.',
+			descriptionQuality: 'Estamos comprometidos a cultivar, procesar y exportar productos de calidad, bajo estándares internacionales certificados que garanticen a nuestros clientes la satisfacción del consumidor final.',
 			titleLineProducts: 'LÍNEA DE PRODUCTOS',
 			lineProducts: [
 				{
@@ -652,7 +652,7 @@ const i18n = new VueI18n({
 				{
 					id: 1,
 					name: 'INTEGRATED MANAGEMENT SYSTEM',
-					width: 251,
+					width: 290,
 				},
 				{
 					id: 2,
@@ -671,7 +671,7 @@ const i18n = new VueI18n({
 				},
 			],
 			titleQuality: 'QUALITY',
-			descriptionQuality: 'Estamos comprometidos a cultivar, procesar y exportar productos de calidad, bajo estándares internacionales certificados que garanticen a nuestros clientes la satisfacción del consumidor final.',
+			descriptionQuality: 'We are committed to cultivate, process and export quality products, certified under international standards that guarantee our customers the satisfaction of the final consumer.',
 			titleLineProducts: 'OUR PRODUCTS LINE',
 			lineProducts: [
 				{

@@ -580,13 +580,14 @@ export default {
 	border-radius: 31.5px;
 	color: #878787;
 	font-size: 14px;
-	font-weight: 600;
+	font-weight: 500;
 	height: 44px;
 	margin-left: 21px;
 
 	&.active {
 		background-color: #66cc33;
 		color: white;
+		font-weight: bold;
 	}
 
 	&:first-child {

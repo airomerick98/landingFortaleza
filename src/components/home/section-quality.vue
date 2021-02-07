@@ -1,5 +1,7 @@
 <template>
   <div class="section-quality" id="quality">
+	  <img src="/static/images/banners/Bitmap.png" alt="" class="icono-quality-header">
+	  <div>
 		<v-flex class="title-section-quality bold" text-xs-center>
 			{{$t('titleQuality')}}
 		</v-flex>
@@ -60,7 +62,7 @@
 							<div class="mt-4">
 								<ul class="list-none">
 									<li v-for="(li, index) in $t('listTraceability')" :key="index">
-										<span>{{li.id}}.</span>
+										<span>{{li.id}}</span>
 										{{li.name}}</li>
 								</ul>
 							</div>
@@ -103,6 +105,8 @@
 				</v-flex>
 			</v-layout>
 		</v-flex>
+	  </div>
+	  <img src="/static/images/banners/Bitmap2.png" alt="" class="icono-footer"> 
 	</div>  
 </template>
 
@@ -160,16 +164,20 @@ export default {
 
 <style lang="scss" scoped>
 .section-quality {
-	background-image: url('/static/images/banners/banner-quality-mobile.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	// background-image: url('/static/images/banners/banner-quality-mobile.png');
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	// background-position: 50%;
 	// height: 620px;
 	padding: 89px 30px 120px 30px;
+	position: relative;
 	width: 100%;
 
 	@media (min-width: 936px) {
-		background-image: url('/static/images/banners/banner-quality.png');
+		// background-image: url('/static/images/banners/banner-quality.png');
+		// background-attachment: inherit;
+		// box-sizing: border-box;
+		// height: 910px;
 		padding: 106px 30px 120px 30px;
 		// height: 520px;
 	}
@@ -213,6 +221,7 @@ export default {
 	&.active {
 		background-color: #66cc33;
 		color: white;
+		font-weight: 600;
 	}
 
 	@media (min-width: 936px) {
@@ -268,7 +277,7 @@ export default {
 
 	@media (min-width: 936px) {
 		margin: 84px auto 0 auto;
-		max-width: 1135px;
+		max-width: 800px;
 	}
 }
 
@@ -299,5 +308,25 @@ export default {
 
 .bold-list {
 	color: #585858;
+}
+
+.icono-quality-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	@media (max-width: 936px) {
+		width: 40%;
+	}
+}
+
+.icono-footer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
+	@media (max-width: 936px) {
+		width: 40%;
+	}
 }
 </style>

@@ -1366,8 +1366,8 @@ button:disabled {
 .menu__content {
 	border-radius: 8px;
   	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18);
-    top: 42px !important;
-	left: -63px !important;
+    top: 40px !important;
+	left: -89px !important;
 	min-width: 120px !important;
 
 	@media (max-width: 936px) {
@@ -1400,7 +1400,7 @@ button:disabled {
 
 		@media (min-width: 936px) {
 			margin: 0 auto !important;
-			width: 40% !important;
+			width: 60% !important;
 		}
 	}
 }

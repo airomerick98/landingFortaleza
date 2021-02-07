@@ -67,7 +67,7 @@
 					height="15">
 				</button>
 			</div>
-			<v-flex xs9 class="br-mobile">
+			<v-flex xs6 class="br-mobile">
 				<v-layout row align-center>
 					<v-flex>
 						<v-layout row align-center class="menu-header">
@@ -106,10 +106,6 @@
 				</v-flex>
 				</v-layout>
 			</v-flex>
-			<!-- <div>
-				<a href="#" @click="setLocale('es')"><flag iso="pe"></flag></a>
-				<a href="#" @click="setLocale('en')"><flag iso="us"></flag></a>
-			</div> -->
 		</div>
 	</v-layout>
 </template>
@@ -216,7 +212,7 @@ export default {
 		}
 
 		@media (min-width: 1204px) {
-			padding: 27px 9%;
+			padding: 27px 7%;
 		}
 
 		&-logo {
