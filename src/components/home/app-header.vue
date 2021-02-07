@@ -180,6 +180,9 @@ export default {
 
 	&:hover {
 		color: #41aa36;
+		border-bottom: 4px solid #41aa36;
+		font-weight: bold;
+		transition: left 250ms ease-in-out, right 250ms ease-in-out;
 	}
 }
 

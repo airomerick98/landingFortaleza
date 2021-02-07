@@ -16,8 +16,10 @@
 					</div>
 				</div>
 				<div class="text-hover">
-					{{item.description}}
-					<ul class="list-none">
+					<p class="description-hover">
+						{{item.description}}
+					</p>
+					<ul class="list-none mt-4">
 						<li v-for="i in item.listProd" :key="i.id">{{i.name}}</li>
 					</ul>
 				</div>
@@ -161,7 +163,7 @@ export default {
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 12px;
-	height: 206px;
+	height: 265px;
 	margin-bottom: 12px;
 	position: relative;
 
@@ -174,6 +176,10 @@ export default {
 			display: block;
 			margin-top: 10px;
 			z-index: 2;
+		}
+
+		.description-hover {
+			max-width: 310px;
 		}
 
 		.row-hover {
@@ -209,7 +215,7 @@ export default {
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 12px;
-	height: 206px;
+	height: 265px;
 	margin-bottom: 12px;
 	position: relative;
 
@@ -255,7 +261,7 @@ export default {
 	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 12px;
-	height: 206px;
+	height: 265px;
 	position: relative;
 
 	&:hover {

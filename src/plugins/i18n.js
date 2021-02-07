@@ -44,20 +44,27 @@ const i18n = new VueI18n({
 			banners: [
 				{
 					id: 1,
+					url: '/static/images/banners/banner-principal-min.png',
+					urlMobile: '/static/images/banners/banner-footer-mobile.jpg',
+					textBold: 'GARANTIA DE',
+					text: 'AGRONEGOCIOS SOSTENIBLE',
+				},
+				{
+					id: 2,
 					url: '/static/images/banners/image-banner-one.jpg',
 					urlMobile: '/static/images/banners/banner-mobile-one.jpg',
 					textBold: 'DEL CAMPO',
 					text: 'A TU MESA',
 				},
 				{
-					id: 2,
+					id: 3,
 					url: '/static/images/banners/image-banner-two.jpg',
 					urlMobile: '/static/images/banners/banner-mobile-two.jpg',
 					textBold: 'COMERCIALIZAMOS',
 					text: 'LAS MEJORES FRUTAS',
 				},
 				{
-					id: 3,
+					id: 4,
 					textBold: 'COMERCIALIZAMOS',
 					text: 'LOS MEJORES ESPARRAGOS',
 					url: '/static/images/banners/image-banner-three.jpg',
@@ -128,7 +135,30 @@ const i18n = new VueI18n({
 					name: 'PLANTA',
 				},
 			],
+			btnQuantity: [
+				{
+					id: 1,
+					name: 'SISTEMA INTEGRADO DE GESTIÓN',
+					width: 251,
+				},
+				{
+					id: 2,
+					name: 'SEGURIDAD ALIMENTARIA',
+					width: 205,
+				},
+				{
+					id: 3,
+					name: 'TRAZABILIDAD',
+					width: 166,
+				},
+				{
+					id: 4,
+					name: 'CERTIFICACIONES',
+					width: 166,
+				},
+			],
 			titleQuality: 'CALIDAD',
+			descriptionQuality: 'We are committed to cultivate, process and export quality products, certified under international standards that guarantee our customers the satisfaction of the final consumer.',
 			titleLineProducts: 'LÍNEA DE PRODUCTOS',
 			lineProducts: [
 				{
@@ -136,7 +166,7 @@ const i18n = new VueI18n({
 					icon: '/static/images/icons/icon-product-one.png',
 					urlImage: '/static/images/section/product-1.png',
 					title: 'Conservas',
-					description: 'Elaboramos nuestros productos cumpliendo con el sistema vigente HACCP, asegurando la inocuidad y calidad sanitaria, ofreciendo así productos de calidad.',
+					description: 'Elaboramos nuestros productos cumpliendo con las regulaciones y estándares vigentes de calidad e inocuidad aplicados en nuestra organización.',
 					listProd: [
 						{
 							id: 1,
@@ -154,12 +184,16 @@ const i18n = new VueI18n({
 							id: 4,
 							name: '– Arándano',
 						},
+						{
+							id: 5,
+							name: '- Maracuyá',
+						},
 					],
 				},
 				{
 					id: 2,
 					title: 'Frescos',
-					description: 'Llevamos a tu mesa nuestra línea de productos frescos, directos del campo, cumpliendo con las Buenas Prácticas de Manufactura (BPM) y calidad.',
+					description: 'Elaboramos nuestros productos cumpliendo con las regulaciones y estándares vigentes de calidad e inocuidad aplicados en nuestra organización.',
 					icon: '/static/images/icons/icon-product-two.png',
 					urlImage: '/static/images/section/product-2.png',
 					listProd: [
@@ -188,7 +222,7 @@ const i18n = new VueI18n({
 				{
 					id: 3,
 					title: 'Congelados',
-					description: 'Llevamos a tu mesa nuestra línea de congelados, cumpliendo con los lineamientos de calidad e inocuidad.',
+					description: 'Elaboramos nuestros productos cumpliendo con las regulaciones y estándares vigentes de calidad e inocuidad aplicados en nuestra organización.',
 					urlImage: '/static/images/section/product-3.png',
 					icon: '/static/images/icons/icon-product-three.png',
 					listProd: [
@@ -207,6 +241,10 @@ const i18n = new VueI18n({
 						{
 							id: 4,
 							name: '– Mango: Kent',
+						},
+						{
+							id: 5,
+							name: '– Palta: Hass y fuerte',
 						},
 					],
 				},
@@ -277,7 +315,8 @@ const i18n = new VueI18n({
 				},
 				{
 					id: 3,
-					name: 'Favorece a la asimilación de nutrientes, con los flavonoides como principales antioxidantes presentes',
+					name: 'Favorece a la',
+					bold: 'asimilación de nutrientes',
 				},
 			],
 			avaibleMango: [
@@ -304,7 +343,7 @@ const i18n = new VueI18n({
 			listPropertiesAran: [
 				{
 					id: 1,
-					name: 'Favorece a la',
+					name: 'Pertenece a la',
 					bold: 'familia de los berries.',
 				},
 				{
@@ -396,9 +435,9 @@ const i18n = new VueI18n({
 			btnTitleContact: 'Enviar',
 			titleFind: 'Encuéntranos',
 			titleInformation: 'Información',
-			imageMobileMarket: '/static/images/banners/image-market-desktop.png',
+			imageMobileMarket: '/static/images/banners/section-market-mobile-min (1).png',
 			titleTemporate: 'Temporada',
-			rangeTemporate: 'Enero - Diciembre',
+			rangeTemporate: 'Ene-Mar- Jul/Sept - Dic',
 			rangeTemporateRed: 'Enero - Agosto',
 			rangeTemporateMar: 'Noviembre - Abril',
 			rangeTemporateArandanos: 'Ene-May/Jul -Dic',
@@ -437,6 +476,49 @@ const i18n = new VueI18n({
 				},
 			],
 			titleContactFooter: 'Contáctanos',
+			titleSystem: 'SISTEMA INTEGRADO DE GESTIÓN (SIG)',
+			descriptionSystem: 'Basado en el compromiso de nuestra alta dirección, nuestros certificados reconocidos a nivel mundial, nuestro cuidado y control de todos los aspectos relacionados con la calidad y nuestra constante capacitación y la motivación de nuestro capital humano.',
+			titleSegurity: 'SEGURIDAD ALIMENTARIAS',
+			descriptionSegurity: 'La calidad y seguridad de los alimentos que llevamos de nuestro campo a la mesa del consumidor final, es nuestra responsabilidad.',
+			titleTraceability: 'TRAZABILIDAD',
+			descriptionTracebilty: 'Conocemos la historia de cada conserva de esparrago que producimos, pues controlamos minuciosamente todo el proceso de trazabilidad desde que es cultivado en el campo hasta que es servido en la mesa del consumidor final. Nuestros principales puntos de control de calidad son:',
+			titleCertifications: 'CERTIFICACIONES',
+			descriptionCertifications: 'La calidad y seguridad de los alimentos que llevamos de nuestros campos a la mesa del consumidor final, es nuestra responsabilidad.',
+			listTraceability: [
+				{
+					id: 1,
+					name: 'Materias Primas',
+				},
+				{
+					id: 2,
+					name: 'Insumos',
+				},
+				{
+					id: 3,
+					name: 'Entorno y Proceso de Producción',
+				},
+				{
+					id: 4,
+					name: 'Producto Final',
+				},
+			],
+			listCertifications: [
+				{
+					id: 1,
+					bold: 'BRC:',
+					text: 'Es la aplicación certificada de un sistema de seguridad alimentaria, que garantiza la Calidad, Inocuidad y legalidad de nuestros productos.',
+				},
+				{
+					id: 2,
+					bold: 'Global GAP:',
+					text: 'Es un conjunto de normas internacionalmente reconocidas sobre las buenas prácticas agrícolas (Good Agricultural Practices). ',
+				},
+				{
+					id: 3,
+					bold: 'HACCP:',
+					text: 'Es un sistema de base científica que identifica peligros específicos y medidas para su control, con el fin de garantizar la inocuidad alimentaria.',
+				},
+			],
 		},
 		en: {
 			headerInit: 'HOME',
@@ -473,6 +555,13 @@ const i18n = new VueI18n({
 				},
 			],
 			banners: [
+				{
+					id: 1,
+					url: 'static/images/banners/banner-principal-min.png',
+					urlMobile: '/static/images/banners/banner-footer-mobile.jpg',
+					textBold: 'GUARANTEE OF',
+					text: 'A SUSTAINABLE AGRIBUSINESS',
+				},
 				{
 					id: 1,
 					url: '/static/images/banners/image-banner-one.png',
@@ -559,7 +648,30 @@ const i18n = new VueI18n({
 					name: 'FACILITY',
 				},
 			],
+			btnQuantity: [
+				{
+					id: 1,
+					name: 'INTEGRATED MANAGEMENT SYSTEM',
+					width: 251,
+				},
+				{
+					id: 2,
+					name: 'FOOD SAFETY',
+					width: 205,
+				},
+				{
+					id: 3,
+					name: 'TRACEABILITY',
+					width: 166,
+				},
+				{
+					id: 4,
+					name: 'CERTIFICATION',
+					width: 166,
+				},
+			],
 			titleQuality: 'QUALITY',
+			descriptionQuality: 'Estamos comprometidos a cultivar, procesar y exportar productos de calidad, bajo estándares internacionales certificados que garanticen a nuestros clientes la satisfacción del consumidor final.',
 			titleLineProducts: 'OUR PRODUCTS LINE',
 			lineProducts: [
 				{
@@ -567,7 +679,7 @@ const i18n = new VueI18n({
 					icon: '/static/images/icons/icon-product-one.png',
 					urlImage: '/static/images/section/product-1.png',
 					title: 'Canned',
-					description: 'We make our products complying with the current HACCP system, ensuring safety and sanitary quality, thus offering quality products.',
+					description: 'We make our products complying with current regulations and standards of quality and safety applied in our organization.',
 					listProd: [
 						{
 							id: 1,
@@ -590,7 +702,7 @@ const i18n = new VueI18n({
 				{
 					id: 2,
 					title: 'Fresh',
-					description: 'We bring to your table our line of fresh products, direct from the field, complying with Good Manufacturing Practices (GMP) and quality.',
+					description: 'We make our products complying with current regulations and standards of quality and safety applied in our organization.',
 					icon: '/static/images/icons/icon-product-two.png',
 					urlImage: '/static/images/section/product-2.png',
 					listProd: [
@@ -619,7 +731,7 @@ const i18n = new VueI18n({
 				{
 					id: 3,
 					title: 'Frozen',
-					description: 'We bring our frozen food line to your table, complying with quality and safety guidelines.',
+					description: 'We make our products complying with current regulations and standards of quality and safety applied in our organization.',
 					urlImage: '/static/images/section/product-3.png',
 					icon: '/static/images/icons/icon-product-three.png',
 					listProd: [
@@ -812,7 +924,7 @@ const i18n = new VueI18n({
 				},
 			],
 			titleMarket: 'MARKETS',
-			imageDesktopMarket: '/static/images/banners/mapa-market-en.png',
+			imageDesktopMarket: '/static/images/banners/image-market-en-min.png',
 			descriptionMarket: 'We are strategic partners of the most demanding food brands and supermarkets in the world. We have been cultivating long-term business relationships based on the competitiveness of our work team, our quality product and the sustainability of our business.',
 			titleContact: 'CONTACT US',
 			placeholderName: 'Name *',
@@ -855,14 +967,57 @@ const i18n = new VueI18n({
 				},
 			],
 			titleContactFooter: 'Contac Us',
-			imageMobileMarket: '/static/images/banners/market-mobile-en.png',
+			imageMobileMarket: '/static/images/banners/section-market-mobile-en-min.png',
 			titleTemporate: 'Season',
-			rangeTemporate: 'Junary to  December',
+			rangeTemporate: 'Jun-March-July/Sept - Dev',
 			rangeTemporateRed: 'Junary to  August',
 			rangeTemporateMar: 'November to  April',
 			rangeTemporateArandanos: 'January to May/  July to December',
 			rangeMango: 'November to April',
 			titleOffice: 'Office',
+			titleSystem: 'INTEGRATED MANAGEMENT SYSTEM (IMS)',
+			descriptionSystem: 'Based in Our senior management commitment, Our certificates recognized a World level, Our care and control of all aspects related to quality and Our constant training and motivation of our human capital.',
+			titleSegurity: 'FOOD SAFETY',
+			descriptionSegurity: 'The quality and safety of food far in our field to table the final consumer, is our responsibility.',
+			titleTraceability: 'TRACEABILITY',
+			descriptionTracebilty: 'We know the history of each product we produce, because we carefully control the entire process of tracking since it is cultivated in the field until it is served at the table of the final consumer. Our main quality control points are:',
+			titleCertifications: 'CERTIFICATION',
+			descriptionCertifications: 'The quality and safety of the food that we bring from our fields to the final consumers table is our responsibility.',
+			listTraceability: [
+				{
+					id: 1,
+					name: 'Raw Material',
+				},
+				{
+					id: 2,
+					name: 'Supplies',
+				},
+				{
+					id: 3,
+					name: 'Environment and Production Process',
+				},
+				{
+					id: 4,
+					name: 'Final Product',
+				},
+			],
+			listCertifications: [
+				{
+					id: 1,
+					bold: 'BRC:',
+					text: 'Certification is the application of a certified food safety system developed by the British Retail Distribution, which guarantees the quality, safety and legality of our products.',
+				},
+				{
+					id: 2,
+					bold: 'Global GAP:',
+					text: 'It is a set of internationally recognized standards on good agricultural practices.',
+				},
+				{
+					id: 3,
+					bold: 'HACCP:',
+					text: 'It is a scientifically based system that identifies specific hazards and measures to control them, in order to guarantee food safety.',
+				},
+			],
 		},
 	},
 });

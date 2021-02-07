@@ -8,7 +8,7 @@
 			<img :src="$t('imageDesktopMarket')" alt="imagen-mapa" class="br-mobile content-image">
 		</div>
 		<div class="content-image">
-			<img :src="$t('imageMobileMarket')" alt="image-mapa-mobile" class="br-desktop">
+			<img :src="$t('imageMobileMarket')" alt="image-mapa-mobile" class="br-desktop w-100">
 		</div>
 	</div>
 </template>
@@ -41,19 +41,26 @@ export default {
 
 .description-market {
 	color: #585858;
+	font-family: 'Poppins', sans-serif !important;
 	font-size: 14px;
 	line-height: 18px;
 	margin: 41px 0 50px 0;
 	padding: 0 40px;
 
 	@media (min-width: 936px) {
+		font-size: 15px;
+		line-height: 22px;
 		margin: 53px auto 0 auto;
-		max-width: 850px;
+		max-width: 895px;
 	}
 }
 
+.w-100 {
+	width: 100%;
+}
+
 .content-image {
-	padding: 0 55px;
+	// padding: 0 55px;
 	width: 100%;
 
 	@media (min-width: 936px) {

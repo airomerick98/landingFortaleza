@@ -12,7 +12,7 @@
 		</div>
 		<div
 		class="content-product">
-			<div v-if="btnSelected === 1">
+			<div v-if="btnSelected === 1" class="content-product">
 				<div class="content-title">
 					<v-flex xs2 class="cont-title-desktop">
 						<span class="title-product">{{$t('titleEs')}}</span>
@@ -34,13 +34,20 @@
 						</ul>
 					</div>
 				</div>
-				<v-layout row mt-2 class="column-reverse-mobile">
-					<v-flex class="pt-desktop">
+				<v-layout row mt-5 class="column-reverse-mobile">
+					<v-flex class="pt-desktop" xs12 md4 sm12>
 						<div>
-							<ul class="list-none pt-one">
+							<ul class="list-none pt-one max-width-desktop">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
-								<li class="mb-product" v-for="(pro, index) in $t('listProperties')" :key="index">
-									<v-layout row>
+								<li class="mb-product" :class="{ 'mb-two' : pro.id === 2 }" v-for="(pro, index) in $t('listProperties')" :key="index">
+									<span>
+										<img src="/static/images/icons/check-mark.svg">
+										<span class="item-description">
+											{{pro.name}}
+											<span class="bold-description">{{pro.bold}}</span>
+										</span>
+									</span>
+									<!-- <v-layout row>
 										<v-flex xs1>
 											<img src="/static/images/icons/check-mark.svg">
 										</v-flex>
@@ -48,7 +55,7 @@
 											{{pro.name}}
 											<span class="bold-description">{{pro.bold}}</span>
 										</v-flex>
-									</v-layout>
+									</v-layout> -->
 								</li>
 							</ul>
 						</div>
@@ -78,8 +85,8 @@
 			<div v-if="btnSelected === 2">
 				<div class="content-title">
 					<v-flex xs2>
-						<span class="title-product">{{$t('titleEsWhite')}}</span>
-						<span class="title-product-green">{{$t('titleEs')}}</span>
+						<span class="title-product">{{$t('titleEs')}}</span>
+						<span class="title-product-green">{{$t('titleEsWhite')}}</span>
 					</v-flex>
 					<div>
 						<p class="title-list">{{$t('titlePres')}}</p>
@@ -97,21 +104,19 @@
 						</ul>
 					</div>
 				</div>
-				<v-layout row mt-2 class="column-reverse-mobile">
-					<v-flex>
+				<v-layout row mt-5 class="column-reverse-mobile">
+					<v-flex xs12 md4 sm12>
 						<div>
 							<ul class="list-none pt-two">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
 								<li class="mb-product" v-for="(pro, index) in $t('listProperties')" :key="index">
-									<v-layout row>
-										<v-flex xs1>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
+									<span>
+										<img src="/static/images/icons/check-mark.svg">
+										<span class="item-description ml-2">
 											{{pro.name}}
 											<span class="bold-description">{{pro.bold}}</span>
-										</v-flex>
-									</v-layout>
+										</span>
+									</span>
 								</li>
 							</ul>
 						</div>
@@ -161,20 +166,18 @@
 					</div>
 				</div>
 				<v-layout row mt-2 class="column-reverse-mobile">
-					<v-flex>
+					<v-flex xs12 md4 sm12>
 						<div>
 							<ul class="list-none pt-three">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
 								<li class="mb-product" v-for="(pim, index) in $t('listPropertiesRed')" :key="index">
-									<v-layout row>
-										<v-flex xs1>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
+									<span>
+										<img src="/static/images/icons/check-mark.svg" alt="icono-check">
+										<span class="item-description ml-2">
 											{{pim.name}}
 											<span class="bold-description">{{pim.bold}}</span>
-										</v-flex>
-									</v-layout>
+										</span>
+									</span>
 								</li>
 							</ul>
 						</div>
@@ -223,20 +226,18 @@
 					</div>
 				</div>
 				<v-layout row mt-2 class="column-reverse-mobile">
-					<v-flex>
+					<v-flex xs12 md4 sm12>
 						<div>
 							<ul class="list-none pt-three">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
 								<li class="mb-product" v-for="(mar, index) in $t('listPropertiesFruit')" :key="index">
-									<v-layout row>
-										<v-flex xs1>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
+									<span>
+										<img src="/static/images/icons/check-mark.svg" alt="icono-check">
+										<span class="item-description ml-2">
 											{{mar.name}}
 											<span class="bold-description">{{mar.bold}}</span>
-										</v-flex>
-									</v-layout>
+										</span>
+									</span>
 								</li>
 							</ul>
 						</div>
@@ -256,7 +257,7 @@
 							</ul>
 						</div>
 					</v-flex>
-					<v-flex class="relative">
+					<v-flex class="relative" xs8>
 						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeTemporateMar')}}</button>
 						<img src="/static/images/section/maracuya-mobile.png" alt="imagen-esparrago" class="mobile-image-maracuya br-desktop">
 						<img src="/static/images/section/img-maracuya.png" class="w-100 br-mobile" alt="imagen-esparrago">
@@ -285,12 +286,19 @@
 					</div>
 				</div>
 				<v-layout row class="column-reverse-mobile content-arandanos-desktop">
-					<v-flex>
+					<v-flex xs12 md4 sm12>
 						<div>
 							<ul class="list-none mt-aran-mobile">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
 								<li class="mb-product" v-for="(aran, index) in $t('listPropertiesAran')" :key="index">
-									<v-layout row>
+									<span>
+										<img src="/static/images/icons/check-mark.svg">
+										<span>
+											{{aran.name}}
+											<span class="bold-description">{{aran.bold}}</span>
+										</span>
+									</span>
+									<!-- <v-layout row>
 										<v-flex xs1>
 											<img src="/static/images/icons/check-mark.svg">
 										</v-flex>
@@ -298,7 +306,7 @@
 											{{aran.name}}
 											<span class="bold-description">{{aran.bold}}</span>
 										</v-flex>
-									</v-layout>
+									</v-layout> -->
 								</li>
 							</ul>
 						</div>
@@ -353,7 +361,14 @@
 							<ul class="list-none pd-mango">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
 								<li class="mb-product" v-for="(man, index) in $t('listPropertiesMang')" :key="index">
-									<v-layout row>
+									<span>
+										<img src="/static/images/icons/check-mark.svg">
+										<span>
+											{{man.name}}
+											<span class="bold-description">{{man.bold}}</span>
+										</span>
+									</span>
+									<!-- <v-layout row>
 										<v-flex xs1>
 											<img src="/static/images/icons/check-mark.svg">
 										</v-flex>
@@ -361,7 +376,7 @@
 											{{man.name}}
 											<span class="bold-description">{{man.bold}}</span>
 										</v-flex>
-									</v-layout>
+									</v-layout> -->
 								</li>
 							</ul>
 						</div>
@@ -381,7 +396,7 @@
 							</ul>
 						</div>
 					</v-flex>
-					<v-flex class="relative">
+					<v-flex class="relative" xs8>
 						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeMango')}}</button>
 						<img src="/static/images/section/mango-mobile.png" alt="imagen-esparrago" class="br-desktop image-mango">
 						<img src="/static/images/section/img-mango-kent.png" class="w-100 br-mobile" alt="imagen-esparrago">
@@ -693,8 +708,9 @@ export default {
 	padding: 0 30px;
 
 	@media (min-width: 936px) {
-		margin-top: 70px;
-		padding: 0 10%;
+		margin: 70px auto 0 auto;
+		max-width: 1100px;
+		padding: 0;
 	}
 }
 
@@ -725,6 +741,12 @@ export default {
 
 .mb-product {
 	margin-bottom: 16px;
+
+	&.mb-two {
+		@media (min-width: 936px) {
+			margin-bottom: 44px;
+		}
+	}
 
 	@media (min-width: 936px) {
 		margin-bottom: 50px;
@@ -788,10 +810,10 @@ export default {
 		bottom: 56px;
 		font-size: 16px;
 		height: 55px;
-		line-height: 17px;
+		line-height: 20px;
 		padding: 0 10px;
-		right: 82px;
-		width: 192px;
+		right: 0;
+		width: auto;
 	}
 }
 
@@ -821,7 +843,7 @@ export default {
 
 .pt-one {
 	@media (min-width: 936px) {
-		padding-top: 46px;
+		padding-top: 64px;
 	}
 }
 
@@ -885,6 +907,12 @@ export default {
 	@media (max-width: 936px) {
 		bottom: 30px;
 		position: relative;
+	}
+}
+
+.max-width-desktop {
+	@media (min-width: 936px) {
+		max-width: 335px;	
 	}
 }
 </style>
