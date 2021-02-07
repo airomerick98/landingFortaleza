@@ -562,19 +562,6 @@ button:disabled {
 	opacity: 0.6;
 }
 
-.jailai {
-	animation: jailai 3s ease-in;
-}
-
-@keyframes jailai {
-	from {
-		background: yellow;
-	}
-	to {
-		background: white;
-	}
-}
-
 .due-btn {
 	.btn__content {
 		&:before {
@@ -904,14 +891,6 @@ button:disabled {
 	}
 }
 
-.filter-checkbox {
-	align-items: center !important;
-	
-	&.input-group.input-group--selection-controls .input-group__input .icon--selection-control {
-		top: 9px !important;
-	}
-}
-
 .action-td {
 	min-width: 128px !important;
 }
@@ -951,39 +930,6 @@ button:disabled {
 	}
 }
 
-.excel-menu-content {
-	border: 1px solid color(borderRowSelected);
-	border-radius: 3px;
-
-	.list {
-		border-radius: 3px;
-		padding: 0px;
-
-		& > div {
-			border-bottom: 1px solid color(blue-grey);
-			margin: 0px 16px;
-
-			a div {
-				text-align: center;
-			}
-
-			&:last-child {
-				border-bottom: 0px;
-			}
-		}
-	}
-
-	.list__tile {
-		height: 28px !important;
-	}
-
-	.list__tile__title {
-		color: color(paginationText);
-		font-family: font(lato-regular);
-		font-size: map-get($sizes, small11);
-	}
-}
-
 .navigation-drawer--temporary:not(.navigation-drawer--close) {
 	z-index: 9;
 }
@@ -992,18 +938,6 @@ button:disabled {
 	.input-group--disabled {
 		background-color: color(grey) !important;
 	}
-}
-
-.new-create {
-	.input-group__input {
-		padding: 0 5px !important;
-	}
-}
-
-.vue-star-rating-rating-text {
-	font-family: font(lato-regular) !important;
-	font-size: size(medium);
-	margin-top: -2px !important;
 }
 
 .configuration-ecommerce {
@@ -1299,11 +1233,6 @@ button:disabled {
 
 .dialog__content.dialog__content__active {
 	z-index: 99999 !important;
-}
-
-.max-container {
-	margin: 0 auto;
-	max-width: 1200px;
 }
 
 .center {
