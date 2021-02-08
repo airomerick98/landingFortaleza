@@ -35,7 +35,7 @@
 					</div>
 				</div>
 				<v-layout row mt-5 class="column-reverse-mobile">
-					<v-flex class="pt-desktop" xs12 md4 sm12>
+					<v-flex class="pt-desktop mt-mobile" xs12 md4 sm12>
 						<div>
 							<ul class="list-none pt-one max-width-desktop">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
@@ -107,7 +107,7 @@
 				<v-layout row mt-5 class="column-reverse-mobile">
 					<v-flex xs12 md4 sm12>
 						<div>
-							<ul class="list-none pt-two">
+							<ul class="list-none pt-two mt-mobile">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
 								<li class="mb-product" v-for="(pro, index) in $t('listProperties')" :key="index">
 									<span>
@@ -168,7 +168,7 @@
 				<v-layout row mt-2 class="column-reverse-mobile">
 					<v-flex xs12 md4 sm12>
 						<div>
-							<ul class="list-none pt-three">
+							<ul class="list-none pt-three mt-mobile">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
 								<li class="mb-product" v-for="(pim, index) in $t('listPropertiesRed')" :key="index">
 									<span>
@@ -206,7 +206,7 @@
 			</div>
 			<div v-if="btnSelected === 4">
 				<div class="content-title">
-					<v-flex xs8>
+					<v-flex xs12 sm12 md8>
 						<span class="title-product-green">{{$t('titleGreenFruit')}}</span>
 					</v-flex>
 					<div>
@@ -228,7 +228,7 @@
 				<v-layout row mt-2 class="column-reverse-mobile">
 					<v-flex xs12 md4 sm12>
 						<div>
-							<ul class="list-none pt-three">
+							<ul class="list-none pt-three mt-mobile">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
 								<li class="mb-product" v-for="(mar, index) in $t('listPropertiesFruit')" :key="index">
 									<span>
@@ -257,8 +257,8 @@
 							</ul>
 						</div>
 					</v-flex>
-					<v-flex class="relative" xs8>
-						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeTemporateMar')}}</button>
+					<v-flex class="relative" xs9 sm8 md8>
+						<button class="btn-temporate btn-maracuya">{{$t('titleTemporate')}} <br> {{$t('rangeTemporateMar')}}</button>
 						<img src="/static/images/section/maracuya-mobile.png" alt="imagen-esparrago" class="mobile-image-maracuya br-desktop">
 						<img src="/static/images/section/img-maracuya.png" class="w-100 br-mobile" alt="imagen-esparrago">
 					</v-flex>
@@ -288,7 +288,7 @@
 				<v-layout row class="column-reverse-mobile content-arandanos-desktop">
 					<v-flex xs12 md4 sm12>
 						<div>
-							<ul class="list-none mt-aran-mobile">
+							<ul class="list-none mt-aran-mobile mt-mobile">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
 								<li class="mb-product" v-for="(aran, index) in $t('listPropertiesAran')" :key="index">
 									<span>
@@ -298,15 +298,6 @@
 											<span class="bold-description">{{aran.bold}}</span>
 										</span>
 									</span>
-									<!-- <v-layout row>
-										<v-flex xs1>
-											<img src="/static/images/icons/check-mark.svg">
-										</v-flex>
-										<v-flex class="item-description ml-2">
-											{{aran.name}}
-											<span class="bold-description">{{aran.bold}}</span>
-										</v-flex>
-									</v-layout> -->
 								</li>
 							</ul>
 						</div>
@@ -358,7 +349,7 @@
 				<v-layout row mt-2 class="column-reverse-mobile">
 					<v-flex>
 						<div>
-							<ul class="list-none pd-mango">
+							<ul class="list-none pd-mango mt-mobile">
 								<p class="title-list br-desktop">{{$t('titleProperties')}}</p>
 								<li class="mb-product" v-for="(man, index) in $t('listPropertiesMang')" :key="index">
 									<span>
@@ -643,12 +634,10 @@ export default {
 
 .item-description {
 	color: #000000;
-	font-size: 12px;
 	line-height: 17px;
 	max-width: 235px;
 
 	@media (min-width: 936px) {
-		font-size: 15px;
 		max-width: 236px;
 	}
 }
@@ -835,10 +824,10 @@ export default {
 
 .mobile-image-maracuya {
 	@media (max-width: 936px) {
-		bottom: 20px;
+		bottom: 10px;
 		left: 58px;
 		position: relative;
-		width: 70%;
+		width: 90%;
 	}
 }
 
@@ -914,6 +903,19 @@ export default {
 .max-width-desktop {
 	@media (min-width: 936px) {
 		max-width: 335px;	
+	}
+}
+
+.btn-maracuya {
+	@media (max-width: 936px) {
+		bottom: -17px;
+		right: -73px;
+	}
+}
+
+.mt-mobile {
+	@media (max-width: 936px) {
+		margin-top: 30px;
 	}
 }
 </style>

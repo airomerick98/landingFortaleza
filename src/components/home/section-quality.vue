@@ -62,7 +62,7 @@
 							<div class="mt-4">
 								<ul class="list-none">
 									<li v-for="(li, index) in $t('listTraceability')" :key="index">
-										<span>{{li.id}}</span>
+										<span>{{li.id}}.</span>
 										{{li.name}}</li>
 								</ul>
 							</div>
@@ -169,7 +169,7 @@ export default {
 	// background-repeat: no-repeat;
 	// background-position: 50%;
 	// height: 620px;
-	padding: 89px 30px 120px 30px;
+	padding: 89px 0 120px 6px;
 	position: relative;
 	width: 100%;
 
@@ -196,6 +196,7 @@ export default {
 	color: #585858;
 	font-size: 14px;
 	line-height: 18px;
+	padding: 0 24px;
 	margin: 19px 0 58px 0;
 
 	@media (min-width: 936px) {
@@ -203,6 +204,7 @@ export default {
 		line-height: 20px;
 		margin: 39px auto 67px auto;
 		max-width: 782px;
+		padding: 0;
 	}
 }
 
@@ -232,7 +234,9 @@ export default {
 .content-buttons {
 	background-color: #fafafa;
 	padding: 9px 0 9px 11px;
-  	border-radius: 31.5px;
+	border-top-left-radius: 31px;
+	border-bottom-left-radius: 31px;
+  	// border-radius: 31.5px;
 	overflow: auto;
     overflow-y: hidden;
     margin: 0 auto;
@@ -265,6 +269,7 @@ export default {
 
 .content-tab {
 	margin-top: 52px;
+	padding: 0 42px;
 
 	@media (min-width: 936px) {
 		margin: 84px auto 0 auto;
