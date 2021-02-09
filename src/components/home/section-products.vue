@@ -387,7 +387,7 @@
 							</ul>
 						</div>
 					</v-flex>
-					<v-flex class="relative" xs8>
+					<v-flex class="relative" sm10 md8 lg8>
 						<button class="btn-temporate">{{$t('titleTemporate')}} <br> {{$t('rangeMango')}}</button>
 						<img src="/static/images/section/mango-mobile.png" alt="imagen-esparrago" class="br-desktop image-mango">
 						<img src="/static/images/section/img-mango-kent.png" class="w-100 br-mobile" alt="imagen-esparrago">

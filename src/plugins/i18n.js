@@ -441,7 +441,7 @@ const i18n = new VueI18n({
 			rangeTemporateRed: 'Enero - Agosto',
 			rangeTemporateMar: 'Noviembre - Abril',
 			rangeTemporateArandanos: 'Ene-May/Jul-Dic',
-			rangeMango: 'NoviembreAbril',
+			rangeMango: 'Noviembre - Abril',
 			titleOffice: 'Oficina',
 			linksFooter: [
 				{
