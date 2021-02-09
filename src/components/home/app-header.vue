@@ -67,7 +67,7 @@
 					height="15">
 				</button>
 			</div>
-			<v-flex xs6 class="br-mobile">
+			<v-flex xs12 sm8 md9 lg7 class="br-mobile">
 				<v-layout row align-center>
 					<v-flex>
 						<v-layout row align-center class="menu-header">
@@ -78,7 +78,7 @@
 						</v-flex>
 					</v-layout>
 				</v-flex>
-				<v-flex xs2 class="br-mobile">
+				<div class="br-mobile width-select-lan">
 					<v-select
 						class="input-component"
 						v-model="country"
@@ -103,7 +103,7 @@
 							</div>
 						</template>
 					</v-select>
-				</v-flex>
+				</div>
 				</v-layout>
 			</v-flex>
 		</div>
@@ -410,6 +410,12 @@ export default {
 	.width-mobile {
 		@media (max-width: 936px) {
 			width: 85%;
+		}
+	}
+
+	.width-select-lan {
+		@media (min-width: 936px) {
+			width: 115px;
 		}
 	}
 </style>

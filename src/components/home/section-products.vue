@@ -801,7 +801,7 @@ export default {
 		font-size: 16px;
 		height: 55px;
 		line-height: 20px;
-		padding: 0 10px;
+		padding: 0 20px;
 		right: 0;
 		width: auto;
 	}
