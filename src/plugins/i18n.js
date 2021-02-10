@@ -1005,7 +1005,7 @@ const i18n = new VueI18n({
 				{
 					id: 1,
 					bold: 'BRC:',
-					text: 'Certification is the application of a certified food safety system developed by the British Retail Distribution, which guarantees the quality, safety and legality of our products.',
+					text: 'Certification is the application of a certified food safety system developed by the British Retail Distribution, which guarantees the quality, safety, legality and authenticity of our products.',
 				},
 				{
 					id: 2,

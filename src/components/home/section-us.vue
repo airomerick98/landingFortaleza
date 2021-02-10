@@ -209,6 +209,7 @@ export default {
 
 	@media (min-width: 936px) {
 		margin-left: 20px;
+		width: 157px;
 	}
 }
 
