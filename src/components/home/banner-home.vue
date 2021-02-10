@@ -30,53 +30,12 @@
 					</div>
 				</slider-item>
 			</slider>
-			<!-- <slider
-				class="br-desktop"
-				:control-btn="false"
-				height="100vh"
-				animation="fade"
-				:speed="6000"
-				width="100%"
-			>
-				<slider-item  v-for="(item, index) in $t('bannersMobile')" :key="index">
-					<div class="banner-slide br-desktop" :style="`background-image: url(${item.url})`">
-						<v-flex class="text-bold-banner">{{item.textBold}}</v-flex>
-						<v-flex class="subtitle-banner">{{item.text}}</v-flex>
-					</div>
-				</slider-item>
-			</slider> -->
 		</div>
 </template>
 
 <script>
-// function data() {
-// 	return {
-// 		banners: [
-// 			{
-// 				id: 1,
-// 				url: '/static/images/banners/image-banner-one.png',
-// 				textBold: 'DEL CAMPO',
-// 				text: 'A TU MESA',
-// 			},
-// 			{
-// 				id: 2,
-// 				url: '/static/images/banners/image-banner-two.png',
-// 				textBold: 'COMERCIALIZAMOS',
-// 				text: 'LAS MEJORES FRUTAS',
-// 			},
-// 			{
-// 				id: 3,
-// 				textBold: 'COMERCIALIZAMOS',
-// 				text: 'LOS MEJORES ESPARRAGOS',
-// 				url: '/static/images/banners/image-banner-three.png',
-// 			},
-// 		],
-// 	};
-// }
-
 export default {
 	name: 'banner-home',
-	// data,
 };
 </script>
 

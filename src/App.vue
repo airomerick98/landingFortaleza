@@ -1400,7 +1400,7 @@ button:disabled {
 
 		@media (min-width: 936px) {
 			margin: 0 auto !important;
-			width: 60% !important;
+			width: 70% !important;
 		}
 	}
 }

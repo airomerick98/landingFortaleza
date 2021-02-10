@@ -66,7 +66,7 @@ const i18n = new VueI18n({
 				{
 					id: 4,
 					textBold: 'COMERCIALIZAMOS',
-					text: 'LOS MEJORES ESPARRAGOS',
+					text: 'LOS MEJORES ESPÁRRAGOS',
 					url: '/static/images/banners/image-banner-three.jpg',
 					urlMobile: '/static/images/banners/banner-mobile-three.jpg',
 				},
@@ -506,7 +506,7 @@ const i18n = new VueI18n({
 				{
 					id: 1,
 					bold: 'BRC:',
-					text: 'Es la aplicación certificada de un sistema de seguridad alimentaria, que garantiza la Calidad, Inocuidad y legalidad de nuestros productos.',
+					text: 'Es la aplicación certificada de un sistema de seguridad alimentaria, que garantiza la calidad, inocuidad, legalidad y autenticidad de nuestros productos.',
 				},
 				{
 					id: 2,

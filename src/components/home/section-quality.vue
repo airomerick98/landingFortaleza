@@ -273,7 +273,7 @@ export default {
 
 	@media (min-width: 936px) {
 		margin: 84px auto 0 auto;
-		max-width: 695px;
+		max-width: 795px;
 	}
 }
 
@@ -282,7 +282,7 @@ export default {
 
 	@media (min-width: 936px) {
 		margin: 84px auto 0 auto;
-		max-width: 800px;
+		max-width: 840px;
 	}
 }
 
