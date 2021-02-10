@@ -32,7 +32,7 @@
 						</v-flex>
 					</v-layout>
 				</v-flex>
-				<v-flex ml-2>
+				<v-flex class="content-image">
 					<img src="/static/images/section/sistema-integrado-gestion-calidad-min.png" alt="icono-primer-tab" class="icon-quality">
 				</v-flex>
 			</v-layout>
@@ -47,7 +47,7 @@
 						</v-flex>
 					</v-layout>
 				</v-flex>
-				<v-flex ml-2>
+				<v-flex class="content-image">
 					<img src="/static/images/section/seguridad-alimentaria-calidad-copy-min.png" alt="icono-primer-tab" class="icon-quality">
 				</v-flex>
 			</v-layout>
@@ -69,7 +69,7 @@
 						</v-flex>
 					</v-layout>
 				</v-flex>
-				<v-flex ml-2>
+				<v-flex class="content-image">
 					<img src="/static/images/section/trazabilidad-calidad-min.png" alt="icono-primer-tab" class="icon-quality">
 				</v-flex>
 			</v-layout>
@@ -203,7 +203,7 @@ export default {
 		font-size: 15px;
 		line-height: 20px;
 		margin: 39px auto 67px auto;
-		max-width: 782px;
+		max-width: 715px;
 		padding: 0;
 	}
 }
@@ -274,6 +274,7 @@ export default {
 	@media (min-width: 936px) {
 		margin: 84px auto 0 auto;
 		max-width: 795px;
+		padding: 0;
 	}
 }
 
@@ -282,7 +283,7 @@ export default {
 
 	@media (min-width: 936px) {
 		margin: 84px auto 0 auto;
-		max-width: 840px;
+		max-width: 835px;
 	}
 }
 
@@ -332,6 +333,12 @@ export default {
 
 	@media (max-width: 936px) {
 		width: 40%;
+	}
+}
+
+.content-image {
+	@media (min-width: 936px) {
+		margin-left: 50px;
 	}
 }
 </style>

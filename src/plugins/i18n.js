@@ -478,7 +478,7 @@ const i18n = new VueI18n({
 			titleContactFooter: 'Contáctanos',
 			titleSystem: 'SISTEMA INTEGRADO DE GESTIÓN (SIG)',
 			descriptionSystem: 'Basado en el compromiso de nuestra alta dirección, nuestros certificados reconocidos a nivel mundial, nuestro cuidado y control de todos los aspectos relacionados con la calidad y nuestra constante capacitación y la motivación de nuestro capital humano.',
-			titleSegurity: 'SEGURIDAD ALIMENTARIAS',
+			titleSegurity: 'SEGURIDAD ALIMENTARIA',
 			descriptionSegurity: 'La calidad y seguridad de los alimentos que llevamos de nuestro campo a la mesa del consumidor final, es nuestra responsabilidad.',
 			titleTraceability: 'TRAZABILIDAD',
 			descriptionTracebilty: 'Conocemos la historia de cada conserva de esparrago que producimos, pues controlamos minuciosamente todo el proceso de trazabilidad desde que es cultivado en el campo hasta que es servido en la mesa del consumidor final. Nuestros principales puntos de control de calidad son:',
