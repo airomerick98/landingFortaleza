@@ -529,11 +529,11 @@ function data() {
 					{
 						id: 2,
 						name: 'Aporta',
-						bold: 'magnecio y potasio',
+						bold: 'magnesio y potasio',
 					},
 					{
 						id: 3,
-						name: 'Favorece a la asimilación de nutrientes, con los flavonoides como principales antioxidantes presentes',
+						name: 'Favorece la asimilación de nutrientes, con los flavonoides como principales antioxidantes presentes',
 					},
 				],
 			},

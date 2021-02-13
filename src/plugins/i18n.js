@@ -697,6 +697,10 @@ const i18n = new VueI18n({
 							id: 4,
 							name: '– Blueberry',
 						},
+						{
+							id: 4,
+							name: '- Passion Fruit',
+						},
 					],
 				},
 				{
@@ -751,6 +755,10 @@ const i18n = new VueI18n({
 							id: 4,
 							name: '– Handle: Kent',
 						},
+						{
+							id: 5,
+							name: '- Avocado: Hass and strong',
+						},
 					],
 				},
 			],
@@ -798,8 +806,8 @@ const i18n = new VueI18n({
 				},
 				{
 					id: 2,
-					bold: 'Rich in vitamins a, c and antioxidants',
-					name: 'high content of iron and flavonoids',
+					bold: 'Rich in vitamins A, C and antioxidants',
+					name: 'High content of iron and flavonoids',
 				},
 				{
 					id: 3,
@@ -853,7 +861,7 @@ const i18n = new VueI18n({
 				{
 					id: 2,
 					name: 'Very low in calories,',
-					bold: 'high in fiber, vitamin c and k',
+					bold: 'high in fiber, vitamin C and K',
 				},
 				{
 					id: 3,
