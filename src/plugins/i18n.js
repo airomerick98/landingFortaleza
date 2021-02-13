@@ -311,7 +311,7 @@ const i18n = new VueI18n({
 				{
 					id: 2,
 					name: 'Aporta',
-					bold: 'magnecio y potasio',
+					bold: 'magnesio y potasio',
 				},
 				{
 					id: 3,
